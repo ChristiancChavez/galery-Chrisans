@@ -1,13 +1,12 @@
 import React from 'react';
-//import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
 
 type Iconprops = {
-    label: string,
-    children
+    label?: string,
+    children?: React.ReactChild
 };
 
-const ButtonIcon: React.FC<Iconprops> = ({label, children}) => {
+const ButtonIcon = ({label, children}:Iconprops) => {
     return (
         <Button variant="text">
             {label}
