@@ -28,7 +28,7 @@
     "lint-ts": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "lint-js": "eslint 'src/**/*.{js,jsx}' --quiet --fix",
     "lint": "tslint -c tslint.json src/**/*.{ts,tsx} --fix --format verbose",
-    "storybook": "start-storybook -p 9009 -s public",
+    "storybook": "start-storybook -p 7007 -s public",
     "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {

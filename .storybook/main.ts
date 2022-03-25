@@ -1,4 +1,5 @@
 module.exports = {
+  stories: ['../src/**/*.stories.tsx'],
   typescript: {
     check: false,
     checkOptions: {},
