@@ -1,5 +1,6 @@
 module.exports = {
   stories: ['../src/**/*.stories.tsx'],
+  addons: ['@storybook/addon-controls'],
   typescript: {
     check: false,
     checkOptions: {},

@@ -6,10 +6,11 @@ type Iconprops = {
     children?: React.ReactChild
 };
 
+const handleShowPage = (label: string | undefined ) => console.log(`${label} page`)
+
 const ButtonIcon = ({label, children}:Iconprops) => {
     return (
-        <Button variant="text">
-            {label}
+        <Button onClick={() => handleShowPage(label)} variant="text">
             {children}
         </Button>
     );

@@ -3,7 +3,7 @@ import SubTitle from '../components/atoms/SubTitle';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 export default {
-  title: 'IconButton',
+  title: 'Components/SubTitle/SubTitle',
   component: SubTitle,
 } as ComponentMeta<typeof SubTitle>;
 
@@ -13,7 +13,24 @@ export const subTitleClients = Template.bind({})
 subTitleClients.args = {
   title: 'Clients'
 }
-export const subTitleSearchClients = () => <SubTitle title='Buscar'></SubTitle>;
-export const subTitleCallClients = () => <SubTitle title='Cobranza'></SubTitle>;
-export const subTitleGoodClients = () => <SubTitle title='Buenos'></SubTitle>;
-export const subTitleMalosClients = () => <SubTitle title='Malos'></SubTitle>;
+
+export const subTitleSearchClients = Template.bind({})
+subTitleSearchClients.args = {
+  title: 'Buscar'
+}
+
+export const subTitleCallClients = Template.bind({})
+subTitleCallClients.args = {
+  title: 'Cobranza'
+}
+
+export const subTitleGoodClients = Template.bind({})
+subTitleGoodClients.args = {
+  title: 'Buenos'
+}
+
+export const subTitleMalosClients = Template.bind({})
+subTitleMalosClients.args = {
+  title: 'Malos'
+}
+
