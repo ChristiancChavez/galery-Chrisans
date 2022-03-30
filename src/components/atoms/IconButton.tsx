@@ -8,12 +8,10 @@ type Iconprops = {
 
 const handleShowPage = (label: string | undefined ) => console.log(`${label} page`)
 
-const ButtonIcon = ({label, children}:Iconprops) => {
+export const ButtonIcon = ({label, children}:Iconprops) => {
     return (
         <Button onClick={() => handleShowPage(label)} variant="text">
             {children}
         </Button>
     );
 };
-
-export default ButtonIcon;
