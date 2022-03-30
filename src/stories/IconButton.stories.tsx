@@ -1,5 +1,5 @@
 import React from "react";
-import IconButton  from "../components/atoms/IconButton";
+import { ButtonIcon }  from "../components/atoms/IconButton";
 import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
 import PersonSearchIcon from '@mui/icons-material/PersonSearch';
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
@@ -9,12 +9,12 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 
 export default {
-  title: 'Components/IconButton/IconButton',
-  component: IconButton,
+  title: 'Components/ButtonIcon/ButtonIcon',
+  component: ButtonIcon,
   argTypes: { onClick: { action: 'clicked' } },
-} as ComponentMeta<typeof IconButton>;
+} as ComponentMeta<typeof ButtonIcon>;
 
-const Template: ComponentStory<typeof IconButton> = (args) => <IconButton {...args} />;
+const Template: ComponentStory<typeof ButtonIcon> = (args) => <ButtonIcon {...args} />;
 
 export const labelClients = Template.bind({})
 labelClients.args = {
