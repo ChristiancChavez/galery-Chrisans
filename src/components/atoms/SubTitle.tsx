@@ -3,12 +3,10 @@ import React from 'react';
 type subTitleProps = {
   title: string
 }
-const SubTitle = ({title}:subTitleProps) => {
+export const SubTitle = ({title}:subTitleProps) => {
   return (
-    <h3>
+    <h3 data-testid="subtitle">
       {title}
     </h3>
   );
 };
-
-export default SubTitle;

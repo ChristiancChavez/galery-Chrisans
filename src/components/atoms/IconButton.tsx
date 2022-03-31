@@ -10,7 +10,7 @@ const handleShowPage = (label: string | undefined ) => console.log(`${label} pag
 
 export const ButtonIcon = ({label, children}:Iconprops) => {
     return (
-        <Button onClick={() => handleShowPage(label)} variant="text">
+        <Button onClick={() => handleShowPage(label)} variant="text" data-testid="button">
             {children}
         </Button>
     );
