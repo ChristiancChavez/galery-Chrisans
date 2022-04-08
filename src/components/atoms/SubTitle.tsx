@@ -5,7 +5,7 @@ type subTitleProps = {
 }
 const SubTitle = ({title}:subTitleProps) => {
   return (
-    <h3>
+    <h3 aria-label='subtitle'>
       {title}
     </h3>
   );
