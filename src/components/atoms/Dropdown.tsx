@@ -6,7 +6,7 @@ type selectTypes = {
   id: string,
   testId: string,
   onChange: (() => void),
-  items: [{value: number, itemId: number, name: string}]
+  items: {value: number, itemId: number, name: string}[]
 }
 
 const Dropdown = ({label, id, testId, onChange, items}: selectTypes) => {
