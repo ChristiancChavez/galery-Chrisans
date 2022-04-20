@@ -1,20 +1,12 @@
-import React from 'react';
-import {Snackbar, Button} from '@mui/material';
-import MuiAlert, { AlertProps } from '@mui/material/Alert';
+import React, { useState } from 'react';
+import { Snackbar, IconButton } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 
 
 type notificationTypes = {
   status: "error" | "warning" | "info" | "success",
-  buttonClose: false | true
 }
-const Notification =({status, buttonClose}: notificationTypes) => {
-  
-  const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
-    props,
-    ref,
-  ) {
-    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
-  });
+const Notification =({status}: notificationTypes) => {
 
   const message = () => {
     switch(status) {
@@ -26,23 +18,23 @@ const Notification =({status, buttonClose}: notificationTypes) => {
     }
   };
 
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(true);
 
   const handleClose = () => setOpen(false);
+  const action = (
+    <IconButton
+        size="small"
+        aria-label="Botón para Cerrar el alert"
+        color="inherit"
+        onClick={handleClose}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+  )
 
   return (
-    <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity={status} sx={{ width: '100%' }}
-          aria-label={message()}
-        action={ buttonClose &&
-          <Button color="inherit" size="small" aria-label='Botón para Cerrar el alert'>
-            Cerrar
-          </Button>
-          }
-        >
-          {message()}
-        </Alert>
-      </Snackbar>
+    <Snackbar open={open} autoHideDuration={6000} onClose={handleClose} action={action}  sx={{ width: '100%' }}
+    aria-label={message()} message={message()}/>
   );
 }
 

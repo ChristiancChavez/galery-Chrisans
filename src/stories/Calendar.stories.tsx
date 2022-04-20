@@ -4,15 +4,15 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 
 export default {
-  title: 'Components/Dropdown/Dropdown',
+  title: 'Components/Calendar/Calendar',
   component: Calendar,
 } as ComponentMeta<typeof Calendar>;
 
 const Template: ComponentStory<typeof Calendar> = (args) => <Calendar {...args} />;
 
-export const picturesDropdown = Template.bind({})
-picturesDropdown.args = {
-  label: 'Calendario para asignar cuotas',
+export const calendar = Template.bind({})
+calendar.args = {
+  label: 'Asignar cuotas',
   testId: 'Cuadros'
 };
 

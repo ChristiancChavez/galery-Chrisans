@@ -4,7 +4,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 
 export default {
-  title: 'Components/Dropdown/Dropdown',
+  title: 'Components/InputForm/InputForm',
   component: InputForm,
 } as ComponentMeta<typeof InputForm>;
 
@@ -17,13 +17,13 @@ nameInput.args = {
 };
 
 export const pictureInput = Template.bind({})
-nameInput.args = {
+pictureInput.args = {
   placeholder: 'Artículo',
   type: 'text'
 };
 
 export const shareInput = Template.bind({})
-nameInput.args = {
+shareInput.args = {
   placeholder: 'Cuotas',
   type: 'number'
 };

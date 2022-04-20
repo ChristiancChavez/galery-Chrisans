@@ -4,7 +4,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 
 export default {
-  title: 'Components/Dropdown/Dropdown',
+  title: 'Components/Title/Title',
   component: Title,
 } as ComponentMeta<typeof Title>;
 

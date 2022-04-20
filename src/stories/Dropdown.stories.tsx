@@ -13,8 +13,10 @@ const Template: ComponentStory<typeof Dropdown> = (args) => <Dropdown {...args} 
 export const picturesDropdown = Template.bind({})
 picturesDropdown.args = {
   label: 'Cuadros',
-  items: [{value: 5, itemId: 5, name: 'Sagrado corazón'},{value: 5, itemId: 3, name: 'misericordioso'},
-  {value: 5, itemId: 4, name: 'Sagrada familia'},{value: 5, itemId: 8, name: 'Sagrado corazón'}]
+  id: 1,
+  testId: 'select_pictures',
+  items: [{value: 'Sagrado corazón', itemId: 5, name: 'Sagrado corazón'},{value: 'misericordioso', itemId: 3, name: 'misericordioso'},
+  {value: 'Sagrada familia', itemId: 4, name: 'Sagrada familia'},{value: 'Guadalupe', itemId: 8, name: 'Guadalupe'}]
 };
 
 
