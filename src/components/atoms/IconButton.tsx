@@ -1,20 +1,17 @@
 import React from 'react';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import Fade from '@mui/material/Fade';
+import { Fade, Tooltip, Button } from '@mui/material';
 
-type Iconprops = {
+type IconTypes = {
     label: string,
-    children: React.ReactChild,
+    children?: React.ReactChild,
     testId: string
 };
 
-export const IconButton = ({label, children, testId}:Iconprops) => {
-    const handleShowPage = (label?: string) => console.log(`${label} page`);
-
+export const ButtonIcon = ({label, children,testId}:IconTypes) => {
+    const handleShowPage = () => console.log(`${label} page`);
     return (
         <Tooltip title={label} TransitionComponent={Fade} TransitionProps={{ timeout: 400 }} role="tooltip">
-            <Button onClick={() => handleShowPage(label)} variant="text" data-testid={testId}>
+            <Button onClick={handleShowPage} variant="text" data-testid={testId}>
                 {children}
             </Button>
         </Tooltip>

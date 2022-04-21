@@ -1,13 +1,15 @@
 import React from 'react';
 
-type subTitleProps = {
+type subTitleTypes = {
   title: string,
   testId: string
 }
-export const SubTitle = ({title, testId}:subTitleProps) => {
+const SubTitle = ({title, testId}:subTitleTypes) => {
   return (
-    <h3 aria-label='subtitle' data-testid={testId}>
+    <h3 aria-label={title} data-testId={testId}>
       {title}
     </h3>
   );
 };
+
+export default SubTitle;
