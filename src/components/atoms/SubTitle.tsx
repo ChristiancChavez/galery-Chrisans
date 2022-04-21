@@ -6,7 +6,7 @@ type subTitleProps = {
 }
 export const SubTitle = ({title, testId}:subTitleProps) => {
   return (
-    <h3 data-testid={testId}>
+    <h3 aria-label='subtitle' data-testid={testId}>
       {title}
     </h3>
   );
