@@ -1,5 +1,5 @@
 import React from "react";
-import { SubTitle } from '../components/atoms/SubTitle';
+import SubTitle from '../components/atoms/SubTitle';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 export default {
@@ -11,26 +11,26 @@ const Template: ComponentStory<typeof SubTitle> = (args) => <SubTitle {...args} 
 
 export const subTitleClients = Template.bind({})
 subTitleClients.args = {
-  title: 'Clients'
+  text: 'Clients'
 }
 
 export const subTitleSearchClients = Template.bind({})
 subTitleSearchClients.args = {
-  title: 'Buscar'
+  text: 'Buscar'
 }
 
 export const subTitleCallClients = Template.bind({})
 subTitleCallClients.args = {
-  title: 'Cobranza'
+  text: 'Cobranza'
 }
 
 export const subTitleGoodClients = Template.bind({})
 subTitleGoodClients.args = {
-  title: 'Buenos'
+  text: 'Buenos'
 }
 
 export const subTitleMalosClients = Template.bind({})
 subTitleMalosClients.args = {
-  title: 'Malos'
+  text: 'Malos'
 }
 
