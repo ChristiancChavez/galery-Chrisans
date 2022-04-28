@@ -6,8 +6,8 @@ import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 describe('test IconButton component', () => {
 
   test('button exist', () => {
-    const  { getByTestId } = render(<ButtonIcon label='addClients' testId="addClient"><PlaylistAddCheckIcon /></ButtonIcon>);
-    const button = getByTestId('addClient');
+    render(<ButtonIcon label='addClients' testId="addClient"><PlaylistAddCheckIcon /></ButtonIcon>);
+    const button = screen.getByTestId('addClient');
     expect(button).toBeTruthy();
   });
 
