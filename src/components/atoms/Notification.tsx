@@ -32,17 +32,17 @@ const Notification =({status, buttonClose}: notificationTypes) => {
 
   return (
     <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity={status} sx={{ width: '100%' }}
-          aria-label={message()}
-        action={ buttonClose &&
-          <Button color="inherit" size="small" aria-label='Botón para Cerrar el alert'>
-            Cerrar
-          </Button>
-          }
-        >
-          {message()}
-        </Alert>
-      </Snackbar>
+      <Alert dataTestid='notification' onClose={handleClose} severity={status} sx={{ width: '100%' }}
+        aria-label={message()}
+      action={ buttonClose &&
+        <Button color="inherit" size="small" aria-label='Botón para Cerrar el alert'>
+          Cerrar
+        </Button>
+        }
+      >
+        {message()}
+      </Alert>
+    </Snackbar>
   );
 }
 

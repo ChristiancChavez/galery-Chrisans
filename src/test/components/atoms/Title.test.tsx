@@ -2,7 +2,7 @@ import React from 'react';
 import Title from '../../../components/atoms/Title';
 import { render, screen, cleanup } from '@testing-library/react';
 
-describe('test Calendar component', () => {
+describe('test title component', () => {
   afterAll(() => {
     cleanup();
   }); 
