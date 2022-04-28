@@ -1,7 +1,5 @@
-import React, { useState }  from 'react';
-import { Select, InputLabel, SelectChangeEvent } from '@mui/material';
-
-//FormControl,  
+import React, {useState} from 'react';
+import { Select, MenuItem, FormControl, InputLabel, SelectChangeEvent  } from '@mui/material';
 
 type selectTypes = {
   label: string,
@@ -11,33 +9,30 @@ type selectTypes = {
   items: {value: string, itemId: number, name: string}[]
 }
 
-const Dropdown = ({items, label, testId, id}:selectTypes) => {
+const Dropdown = ({label, id, testId, items}: selectTypes) => {
 
   const [valueSelect, setValueSelect] = useState('');
 
   const handleChange = (event: SelectChangeEvent ) => {
     setValueSelect(event.target.value as string);
   };
-
   return (
-    // <FormControl fullWidth>
     <>
       <InputLabel data-testid="select_label">{label}</InputLabel>
-       <Select
-         labelId={`${label}-${id}`}
-         data-testid={testId}
-         id={testId}
-         value={valueSelect}
-         label={label}
-         onChange={handleChange}
-         aria-label={`Selecciona ${label}`}
-       >
-         {
-           items.map(item => <option  className='menuItem' value={item.value} data-testId={item.itemId} key={item.itemId} aria-label={item.name} role={'itemOption'}>{item.name}</option>)
-         }
-       </Select>
-       </>
-    // </FormControl>
+      <Select
+        labelId={`${label}-${id}`}
+        data-testid={testId}
+        id={testId}
+        value={valueSelect}
+        label={label}
+        onChange={handleChange}
+        aria-label={`Selecciona ${label}`}
+      >
+        {
+          items.map(item => <option  className='menuItem' value={item.value} data-testId={'menuItem'} key={item.itemId} aria-label={item.name}>{item.name}</option>)
+        }
+      </Select>
+    </>
   );
 };
 
