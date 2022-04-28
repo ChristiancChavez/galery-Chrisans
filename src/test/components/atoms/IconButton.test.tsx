@@ -1,8 +1,7 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import React from 'react';
 import { ButtonIcon } from '../../../components/atoms/IconButton';
 import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
-import { mount } from 'enzyme';
 
 describe('test IconButton component', () => {
 
@@ -20,11 +19,11 @@ describe('test IconButton component', () => {
   });
 
   test('buttons onClick', () => {
-    const logSpy = jest.spyOn(console, 'log');
-    const wrapper= mount(<ButtonIcon label='addClients' testId="addClient"><PlaylistAddCheckIcon /></ButtonIcon>);
-    const button = wrapper.find('button');
-    button.simulate('click');
-    expect(logSpy).toHaveBeenCalledTimes(1);
+    const handleClick = jest.spyOn(console, 'log');
+    render(<ButtonIcon label='addClients' testId="addClient"><PlaylistAddCheckIcon /></ButtonIcon>);
+    const button = screen.getByTestId('addClient');
+    fireEvent.click(button);
+    expect(handleClick).toHaveBeenCalledTimes(1);
   });
 
 }); 

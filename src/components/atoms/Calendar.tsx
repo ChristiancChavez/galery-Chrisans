@@ -23,6 +23,7 @@ const Calendar = ({testId, label}:calendarTypes) => {
           setValue(newValue);
         }}
         renderInput={(params) => <TextField {...params} />}
+        role='date_picker'
       />
     </LocalizationProvider>
   );

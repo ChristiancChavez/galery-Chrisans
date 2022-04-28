@@ -1,12 +1,12 @@
 import React from 'react';
 import Calendar from '../../../components/atoms/Calendar';
-import { mount } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 
 describe('test Calendar component', () => {
 
   test('test existed Calendar', () => {
-    const wrapper = mount(<Calendar testId='cuotas' label='Calendar para asignar cuotas' />);
-    const calendar = wrapper.find('calendar');
-    expect(calendar).toBeTruthy();
+    render(<Calendar testId='cuotas' label='Calendar para asignar cuotas' />);
+    const calendarTexts = screen.getAllByText('Calendar para asignar cuotas');
+    expect(calendarTexts.length).toBe(2);
   });
 })
