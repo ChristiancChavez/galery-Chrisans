@@ -9,7 +9,7 @@ type calendarTypes = {
   label: string
 }
 
-const  Calendar = ({testId, label}:calendarTypes) => {
+const Calendar = ({testId, label}:calendarTypes) => {
   const [value, setValue] = useState<Date | null>(null);
 
   return (
@@ -23,6 +23,7 @@ const  Calendar = ({testId, label}:calendarTypes) => {
           setValue(newValue);
         }}
         renderInput={(params) => <TextField {...params} />}
+        role='date_picker'
       />
     </LocalizationProvider>
   );
