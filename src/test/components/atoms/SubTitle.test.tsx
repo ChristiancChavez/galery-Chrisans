@@ -3,7 +3,8 @@ import React from 'react';
 import SubTitle from '../../../components/atoms/SubTitle';
 
 describe('test ButtonIcon component', () => {
-  test('render SubTitle', () => {
+  
+  test('should SubTitle exists', () => {
     const { getByTestId } = render(<SubTitle text='' testId='subtitle' />);
     const subtitle = getByTestId("subtitle");
     expect(subtitle).toBeTruthy();

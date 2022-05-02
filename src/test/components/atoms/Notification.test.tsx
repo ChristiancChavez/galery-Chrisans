@@ -4,6 +4,7 @@ import { render, screen } from '@testing-library/react';
 
 
 describe('test Notification component', () => {
+  
   test('error notification is shown', async() => {
     render(<Notification status={'error'} buttonClose={false} />);
     const inputLabel = screen.getByText('Error, vuelve a intentarlo.');
