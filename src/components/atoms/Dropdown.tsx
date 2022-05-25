@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Select, MenuItem, FormControl, InputLabel, SelectChangeEvent  } from '@mui/material';
+import { Select, MenuItem, InputLabel, SelectChangeEvent  } from '@mui/material';
 
 type selectTypes = {
   label: string,
@@ -29,7 +29,7 @@ const Dropdown = ({label, id, testId, items}: selectTypes) => {
         aria-label={`Selecciona ${label}`}
       >
         {
-          items.map(item => <option  className='menuItem' value={item.value} data-testId={'menuItem'} key={item.itemId} aria-label={item.name}>{item.name}</option>)
+          items.map(item => <MenuItem  className='menuItem' value={item.value} data-testId={'menuItem'} key={item.itemId} aria-label={item.name}>{item.name}</MenuItem>)
         }
       </Select>
     </>
