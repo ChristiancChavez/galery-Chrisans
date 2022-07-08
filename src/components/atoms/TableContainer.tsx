@@ -16,6 +16,8 @@ import {
 import { v4 as uuid } from "uuid";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import PlaylistRemoveIcon from '@mui/icons-material/PlaylistRemove';
+import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 
 function createData(
   receipt: string,
@@ -30,7 +32,6 @@ function createData(
   image: string,
   price: number,
   complementary_messages: {id_message: string, autor: string, message: string, date_message: string}[],
-  calification: boolean
 ) {
   return {
     receipt,
@@ -50,46 +51,45 @@ function createData(
         id_payment: uuid(),
         total_credit: 150000,
         number_payment: 1,
-        date_payment: '2020-01-05',
+        date_payment: 'Junio-1-21',
         value_payment: 30000
       },
       {
         id_payment: uuid(),
         total_credit: 120000,
         number_payment: 2,
-        date_payment: '2020-01-02',
+        date_payment: 'Junio-1-21',
         value_payment: 30000
       },
       {
         id_payment: uuid(),
         total_credit: 90000,
         number_payment: 3,
-        date_payment: '2020-01-05',
+        date_payment: 'Junio-1-21',
         value_payment: 30000
       },
       {
         id_payment: uuid(),
         total_credit: 60000,
         number_payment: 4,
-        date_payment: '2020-01-02',
+        date_payment: 'Junio-1-21',
         value_payment: 30000
       },
       {
         id_payment: uuid(),
         total_credit: 30000,
         number_payment: 5,
-        date_payment: '2020-01-05',
+        date_payment: 'Junio-1-21',
         value_payment: 30000
       },
       {
         id_payment: uuid(),
         total_credit: 0,
         number_payment: 6,
-        date_payment: '2020-01-02',
+        date_payment: 'Junio-1-21',
         value_payment: 30000
       },
-    ],
-    calification,
+    ]
   };
 }
 
@@ -104,8 +104,7 @@ const Row = (
     category, 
     image, 
     price, 
-    history_payments, 
-    calification, 
+    history_payments,
     complementary_messages
   }: ReturnType<typeof createData>) => {
 
@@ -114,7 +113,7 @@ const Row = (
   return (
     <>
       <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
-        <TableCell component="th" scope="row">{receipt} </TableCell>
+        <TableCell align="center" component="th" scope="row">{receipt} </TableCell>
         <TableCell align="center">{names}</TableCell>
         <TableCell align="center">{phone}</TableCell>
         <TableCell align="center">{last_payment}</TableCell>
@@ -141,7 +140,22 @@ const Row = (
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
-        <TableCell align="center">{calification}</TableCell>
+        <TableCell align="center">
+          <IconButton
+            aria-label="add client to Bad one list"
+            size="small"
+            onClick={() => alert("add client to Bad one list")}
+          >
+            <PlaylistRemoveIcon />  
+          </IconButton>
+          <IconButton
+            aria-label="add client to God one list"
+            size="small"
+            onClick={() => alert("add client to God one list")}
+          >
+            <PlaylistAddCheckIcon />
+          </IconButton>
+        </TableCell>
       </TableRow>
       <TableRow>
         <TableCell style={{ paddingBottom: '10px', paddingTop: '10px', border: 0 }} colSpan={5}>
@@ -247,8 +261,21 @@ const dataRows = [
           "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
         date_message: "Junio-1-21",
       },
-    ],
-    true
+      {
+        id_message: uuid(),
+        autor: "Stella",
+        message:
+          "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        date_message: "Junio-1-21",
+      },
+      {
+        id_message: uuid(),
+        autor: "Stella",
+        message:
+          "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        date_message: "Junio-1-21",
+      },
+    ]
   ),
   createData(
     "0215",
@@ -284,8 +311,21 @@ const dataRows = [
           "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
         date_message: "Junio-1-21",
       },
-    ],
-    false
+      {
+        id_message: uuid(),
+        autor: "Stella",
+        message:
+          "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        date_message: "Junio-1-21",
+      },
+      {
+        id_message: uuid(),
+        autor: "Stella",
+        message:
+          "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        date_message: "Junio-1-21",
+      },
+    ]
   ),
   createData(
     "0215",
@@ -321,8 +361,21 @@ const dataRows = [
           "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
         date_message: "Junio-1-21",
       },
-    ],
-    true
+      {
+        id_message: uuid(),
+        autor: "Stella",
+        message:
+          "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        date_message: "Junio-1-21",
+      },
+      {
+        id_message: uuid(),
+        autor: "Stella",
+        message:
+          "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        date_message: "Junio-1-21",
+      },
+    ]
   ),
   createData(
     "0215",
@@ -358,8 +411,21 @@ const dataRows = [
           "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
         date_message: "Junio-1-21",
       },
-    ],
-    false
+      {
+        id_message: uuid(),
+        autor: "Stella",
+        message:
+          "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        date_message: "Junio-1-21",
+      },
+      {
+        id_message: uuid(),
+        autor: "Stella",
+        message:
+          "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        date_message: "Junio-1-21",
+      },
+    ]
   ),
   createData(
     "0215",
@@ -395,8 +461,21 @@ const dataRows = [
           "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
           date_message: "Junio-1-21",
       },
-    ],
-    true
+      {
+        id_message: uuid(),
+        autor: "Stella",
+        message:
+          "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        date_message: "Junio-1-21",
+      },
+      {
+        id_message: uuid(),
+        autor: "Stella",
+        message:
+          "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum",
+        date_message: "Junio-1-21",
+      },
+    ]
   ),
 ];
 
