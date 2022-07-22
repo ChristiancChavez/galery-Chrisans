@@ -44,7 +44,7 @@ jobs:
         npm run test
     - name: Start the app
       run: |
-        cd my-app
+        cd galery-chrisans
         npm start &
         npx wait-on --timeout 60000
  
