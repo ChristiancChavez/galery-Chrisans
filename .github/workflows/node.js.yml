@@ -47,4 +47,4 @@ jobs:
         cd galery-chrisans
         npm start &
         npx wait-on --timeout 60000
- 
+
