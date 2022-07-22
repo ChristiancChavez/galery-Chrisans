@@ -1,5 +1,6 @@
+import React from "react";
 import "./App.css";
-import TableGalery from "./components/atoms/TableContainer.tsx";
+import TableGalery from "./components/atoms/Table.tsx";
 
 function App() {
   const items = [

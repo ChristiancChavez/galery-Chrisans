@@ -9,7 +9,7 @@ type selectTypes = {
   items: {value: string, itemId: number, name: string}[]
 }
 
-const Dropdown = ({label, id, testId, items}: selectTypes) => {
+const Dropdown = ({label, id, testId, items}:selectTypes) => {
 
   const [valueSelect, setValueSelect] = useState('');
 

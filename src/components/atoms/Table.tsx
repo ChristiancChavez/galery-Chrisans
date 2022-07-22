@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React, { useState } from "react";
 import {
   Paper,
@@ -479,8 +478,10 @@ const dataRows = [
   ),
 ];
 
-
-const TableGalery = () => {
+ type TableTypes = {
+  testId: string,
+ }
+const TableGalery = ({ testId }:TableTypes) => {
 
   const dataCells = [
     { title: "Pedido", id: uuid() },
@@ -498,7 +499,10 @@ const TableGalery = () => {
   ];
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer 
+      component={Paper}  
+      aria-label='este es una tabla donde se muestra la información de los clientes'
+      data-testid={testId}>
       <Table sx={{ minWidth: 650 }} size="small" aria-label="collapsible table">
         <TableHead>
           <TableRow>
