@@ -1,10 +1,10 @@
 import React from 'react';
 
-type subTitleTypes = {
+type SubTitleTypes = {
   text: string,
   testId: string
 }
-const SubTitle = ({text = '', testId}:subTitleTypes) => {
+const SubTitle = ({text = '', testId}: SubTitleTypes) => {
   return (
     <h3 aria-label={text} data-testid={testId}>
       {text}

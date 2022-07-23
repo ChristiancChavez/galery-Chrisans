@@ -4,12 +4,12 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
-type calendarTypes = {
+type CalendarTypes = {
   testId: string,
   label: string
 }
 
-const Calendar = ({testId, label}:calendarTypes) => {
+const Calendar = ({testId, label}: CalendarTypes) => {
   const [value, setValue] = useState<Date | null>(null);
 
   return (

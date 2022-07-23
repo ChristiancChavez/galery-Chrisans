@@ -1,10 +1,10 @@
 import React from "react";
 
-type paragraphTypes = {
+type ParagraphTypes = {
   text: string;
   testId: string;
 };
-const Paragraph = ({ text, testId }: paragraphTypes) => {
+const Paragraph = ({ text, testId }: ParagraphTypes) => {
   return (
     <span
       data-testid={testId}

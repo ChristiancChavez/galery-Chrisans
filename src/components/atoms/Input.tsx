@@ -6,7 +6,7 @@ type InputTypes = {
   type: string
 }
 
-function InputForm({placeholder, type}:InputTypes) {
+function InputForm({placeholder, type}: InputTypes) {
   return (
     <Input placeholder={placeholder} type={type} required />
   );

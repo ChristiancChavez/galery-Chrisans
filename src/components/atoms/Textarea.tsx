@@ -1,12 +1,12 @@
 import React from 'react';
 import { TextareaAutosize } from '@mui/base';
 
-type textareaTypes = {
+type TextareaTypes = {
   placeholder: string,
   testId: string
 }
 
-const Textarea = ({placeholder, testId}:textareaTypes) => {
+const Textarea = ({placeholder, testId}: TextareaTypes) => {
   return (
     <TextareaAutosize 
       aria-label="Textarea para mensajes complementarios"

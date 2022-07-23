@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Select, MenuItem, InputLabel, SelectChangeEvent  } from '@mui/material';
 
-type selectTypes = {
+type SelectTypes = {
   label: string,
   id: number,
   testId: string,
@@ -9,7 +9,7 @@ type selectTypes = {
   items: {value: string, itemId: number, name: string}[]
 }
 
-const Dropdown = ({label, id, testId, items}:selectTypes) => {
+const Dropdown = ({label, id, testId, items}: SelectTypes) => {
 
   const [valueSelect, setValueSelect] = useState('');
 

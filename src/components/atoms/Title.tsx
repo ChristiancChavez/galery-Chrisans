@@ -1,10 +1,10 @@
 import React from 'react';
 
-type titleTypes = {
+type TitleTypes = {
   title: string,
   testId: string
 }
-const Title = ({title, testId}:titleTypes) => {
+const Title = ({title, testId}: TitleTypes) => {
   return (
     <h1 aria-label={`title ${title}`} data-testid={testId}>
       {title}
