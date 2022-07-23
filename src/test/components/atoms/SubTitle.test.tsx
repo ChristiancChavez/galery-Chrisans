@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import SubTitle from "../../../components/atoms/SubTitle";
+import SubTitle from "src/components/atoms/SubTitle";
 
 describe("test ButtonIcon component", () => {
   test("should SubTitle exists", () => {

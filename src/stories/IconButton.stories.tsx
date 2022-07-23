@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonIcon }  from "../components/atoms/IconButton";
+import ButtonIcon from "src/components/atoms/IconButton";
 import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
 import PersonSearchIcon from '@mui/icons-material/PersonSearch';
 import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';

@@ -7,7 +7,7 @@ type IconTypes = {
   testId: string;
 };
 
-export const ButtonIcon = ({ label, children, testId }: IconTypes) => {
+const ButtonIcon = ({ label, children, testId }: IconTypes) => {
   const handleShowPage = () => console.log(`${label} page`);
   return (
     <Tooltip
@@ -22,3 +22,5 @@ export const ButtonIcon = ({ label, children, testId }: IconTypes) => {
     </Tooltip>
   );
 };
+
+export default ButtonIcon;

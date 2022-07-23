@@ -1,5 +1,5 @@
 import React from "react";
-import Notification from "../../../components/atoms/Notification";
+import Notification from "src/components/atoms/Notification";
 import { render, screen } from "@testing-library/react";
 
 describe("test Notification component", () => {

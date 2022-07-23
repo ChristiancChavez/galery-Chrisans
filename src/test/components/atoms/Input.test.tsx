@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from '../../../components/atoms/Input';
+import Input from 'src/components/atoms/Input';
 import { render, screen } from '@testing-library/react';
 
 describe('test Input component', () => {

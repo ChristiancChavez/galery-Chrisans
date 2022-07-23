@@ -1,5 +1,5 @@
 import React from 'react';
-import Textarea from '../../../components/atoms/Textarea';
+import Textarea from 'src/components/atoms/Textarea';
 import { render, screen } from '@testing-library/react';
 
 describe('test Textarea component', () => {

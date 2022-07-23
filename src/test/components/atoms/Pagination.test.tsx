@@ -1,5 +1,5 @@
 import React from 'react';
-import Pagination from '../../../components/atoms/Pagination';
+import Pagination from 'src/components/atoms/Pagination';
 import { render, cleanup, screen } from '@testing-library/react';
 
 

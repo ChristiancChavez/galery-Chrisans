@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import React from "react";
-import Paragraph from "../../../components/atoms/Paragraph";
+import Paragraph from "src/components/atoms/Paragraph";
 
 describe("test Paragraph component", () => {
   test("should render a paragraph", () => {
