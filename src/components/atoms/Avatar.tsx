@@ -6,13 +6,15 @@ type AvatarUserTypes = {
   testId: string,
   user: string
 }
-const AvatarUser = ({ user, testId }:AvatarUserTypes ) => (
-  <Avatar 
-    data-testid={testId} 
-    sx={{ bgcolor: user === 'Stella' ? blue : user === 'Rogelio' ? lime : orange }}
-  >
-    {user}
-  </Avatar>
-  )
+const AvatarUser = ({ user, testId }:AvatarUserTypes ) => { 
+  const backgroundColor = user === 'Stella' ? blue : user === 'Rogelio' ? lime : orange;
+  return (
+    <Avatar 
+      data-testid={testId} 
+      sx={{ bgcolor: backgroundColor }}
+    >
+      {user}
+    </Avatar>
+    )}
 
 export default AvatarUser;
