@@ -7,7 +7,7 @@ type IconTypes = {
   testId: string;
 };
 
-const ButtonIcon = ({ label, children, testId }: IconTypes) => {
+const ButtonIcon = ({ label, children, testId }:IconTypes ) => {
   const handleShowPage = () => console.log(`${label} page`);
   return (
     <Tooltip

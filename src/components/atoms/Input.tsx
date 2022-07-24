@@ -6,10 +6,12 @@ type InputTypes = {
   type: string
 }
 
-function InputForm({placeholder, type}: InputTypes) {
-  return (
-    <Input placeholder={placeholder} type={type} required />
-  );
-}
+const InputForm = ({ placeholder, type }:InputTypes ) => (
+  <Input 
+    placeholder={placeholder} 
+    type={type} 
+    required 
+  />
+);
 
 export default InputForm;

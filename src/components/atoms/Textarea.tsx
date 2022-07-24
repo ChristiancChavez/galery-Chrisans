@@ -6,8 +6,7 @@ type TextareaTypes = {
   testId: string
 }
 
-const Textarea = ({placeholder, testId}: TextareaTypes) => {
-  return (
+const Textarea = ({ placeholder, testId }:TextareaTypes ) => (
     <TextareaAutosize 
       aria-label="Textarea para mensajes complementarios"
       minRows={3}
@@ -16,6 +15,5 @@ const Textarea = ({placeholder, testId}: TextareaTypes) => {
       data-testid={testId}
     />
   );
-}
 
 export default Textarea;

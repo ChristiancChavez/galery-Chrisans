@@ -478,10 +478,10 @@ const dataRows = [
   ),
 ];
 
- type TableTypes = {
+type TableTypes = {
   testId: string,
- }
-const TableGalery = ({ testId }:TableTypes) => {
+}
+const TableGalery = ({ testId }:TableTypes ) => {
 
   const dataCells = [
     { title: "Pedido", id: uuid() },

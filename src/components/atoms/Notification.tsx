@@ -7,7 +7,7 @@ type NotificationTypes = {
   status: "error" | "warning" | "info" | "success",
   buttonClose: false | true
 }
-const Notification =({status, buttonClose}: NotificationTypes) => {
+const Notification = ({ status, buttonClose }:NotificationTypes ) => {
   
   const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
     props,

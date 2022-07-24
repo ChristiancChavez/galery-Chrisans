@@ -9,7 +9,7 @@ type CalendarTypes = {
   label: string
 }
 
-const Calendar = ({testId, label}: CalendarTypes) => {
+const Calendar = ({ testId, label }:CalendarTypes ) => {
   const [value, setValue] = useState<Date | null>(null);
 
   return (

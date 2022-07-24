@@ -4,8 +4,7 @@ type ParagraphTypes = {
   text: string;
   testId: string;
 };
-const Paragraph = ({ text, testId }: ParagraphTypes) => {
-  return (
+const Paragraph = ({ text, testId }:ParagraphTypes ) => (
     <span
       data-testid={testId}
       aria-label={`Se despliega el siguiente texto: ${text}`}
@@ -13,6 +12,5 @@ const Paragraph = ({ text, testId }: ParagraphTypes) => {
       {text}
     </span>
   );
-};
 
 export default Paragraph;

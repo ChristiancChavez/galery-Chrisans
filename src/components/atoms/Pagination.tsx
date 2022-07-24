@@ -7,6 +7,11 @@ type ClientsPaginationTypes = {
   pages: number
 }
 
-const ClientsPagination = ( {testId, pages }: ClientsPaginationTypes) => <Pagination data-testid={testId} count={pages} />
+const ClientsPagination = ( { testId, pages }:ClientsPaginationTypes ) => (
+  <Pagination 
+    data-testid={testId} 
+    count={pages} 
+  />
+)
 
 export default ClientsPagination;
