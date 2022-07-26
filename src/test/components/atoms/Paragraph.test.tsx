@@ -9,15 +9,9 @@ describe("test Paragraph component", () => {
     expect(paragraph).toBeInTheDocument();
   });
 
-  test("shouldn't render a paragraph", () => {
-    render(<Paragraph text="este es un parrafo" testId="paragraphWithoutText" />);
-    const paragraph = screen.getByTestId("paragraphWithoutText");
-    expect(paragraph).not.toBeInTheDocument();
-  });
-
   test("should render a paragraph by testId", () => {
-    render(<Paragraph text="este es un parrafo" testId="paragraph" />);
+    render(<Paragraph text="" testId="paragraph" />);
     const paragraph = screen.getByTestId("paragraph");
-    expect(paragraph).toBeInTheDocument();
+    expect(paragraph.innerHTML).toBe('');
   });
 });
