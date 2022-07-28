@@ -15,8 +15,14 @@ const ButtonIcon = ({ label, children, testId }:IconTypes ) => {
       TransitionComponent={Fade}
       TransitionProps={{ timeout: 400 }}
       role="tooltip"
+      aria-label={`Este es un label para ${label}`}
     >
-      <Button onClick={handleShowPage} variant="text" data-testid={testId}>
+      <Button 
+        onClick={handleShowPage} 
+        variant="text" 
+        data-testid={testId}
+        aria-label={`Este es un bot´n para ${children}`}
+        >
         {children}
       </Button>
     </Tooltip>

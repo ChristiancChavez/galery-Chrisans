@@ -10,7 +10,8 @@ type ClientsPaginationTypes = {
 const ClientsPagination = ( { testId, pages }:ClientsPaginationTypes ) => (
   <Pagination 
     data-testid={testId} 
-    count={pages} 
+    count={pages}
+    aria-label={`Ésta paginación posee ${pages} páginas`}
   />
 )
 
