@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import { Select, MenuItem, FormControl, InputLabel, SelectChangeEvent  } from '@mui/material';
+import React, { useState } from 'react';
+import { Select, MenuItem, InputLabel, SelectChangeEvent  } from '@mui/material';
 
-type selectTypes = {
+type SelectTypes = {
   label: string,
   id: number,
   testId: string,
@@ -9,7 +9,7 @@ type selectTypes = {
   items: {value: string, itemId: number, name: string}[]
 }
 
-const Dropdown = ({label, id, testId, items}: selectTypes) => {
+const Dropdown = ({ label, id, testId, items }:SelectTypes ) => {
 
   const [valueSelect, setValueSelect] = useState('');
 
@@ -29,7 +29,7 @@ const Dropdown = ({label, id, testId, items}: selectTypes) => {
         aria-label={`Selecciona ${label}`}
       >
         {
-          items.map(item => <option  className='menuItem' value={item.value} data-testId={'menuItem'} key={item.itemId} aria-label={item.name}>{item.name}</option>)
+          items.map(item => <MenuItem  className='menuItem' value={item.value} data-testId={'menuItem'} key={item.itemId} aria-label={item.name}>{item.name}</MenuItem>)
         }
       </Select>
     </>

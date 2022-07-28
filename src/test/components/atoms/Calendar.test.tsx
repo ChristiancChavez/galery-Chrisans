@@ -1,5 +1,5 @@
 import React from 'react';
-import Calendar from '../../../components/atoms/Calendar';
+import Calendar from 'src/components/atoms/Calendar';
 import { render, screen } from '@testing-library/react';
 
 describe('test Calendar component', () => {

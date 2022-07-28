@@ -1,5 +1,5 @@
 import React from "react";
-import Dropdown  from "../components/atoms/Dropdown";
+import Dropdown  from "src/components/atoms/Dropdown";
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 

@@ -1,13 +1,12 @@
 import React from 'react';
 import { TextareaAutosize } from '@mui/base';
 
-type textareaTypes = {
+type TextareaTypes = {
   placeholder: string,
   testId: string
 }
 
-const Textarea = ({placeholder, testId}:textareaTypes) => {
-  return (
+const Textarea = ({ placeholder, testId }:TextareaTypes ) => (
     <TextareaAutosize 
       aria-label="Textarea para mensajes complementarios"
       minRows={3}
@@ -16,6 +15,5 @@ const Textarea = ({placeholder, testId}:textareaTypes) => {
       data-testid={testId}
     />
   );
-}
 
 export default Textarea;

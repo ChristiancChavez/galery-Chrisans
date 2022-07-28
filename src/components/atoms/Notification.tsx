@@ -3,11 +3,11 @@ import {Snackbar, Button} from '@mui/material';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
 
 
-type notificationTypes = {
+type NotificationTypes = {
   status: "error" | "warning" | "info" | "success",
   buttonClose: false | true
 }
-const Notification =({status, buttonClose}: notificationTypes) => {
+const Notification = ({ status, buttonClose }:NotificationTypes ) => {
   
   const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
     props,

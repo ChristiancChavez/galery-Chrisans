@@ -1,5 +1,5 @@
 import React from "react";
-import Calendar  from "../components/atoms/Calendar";
+import Calendar  from "src/components/atoms/Calendar";
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 
