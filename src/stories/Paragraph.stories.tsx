@@ -1,5 +1,5 @@
 import React from "react";
-import Paragraph  from "src/components/atoms/Paragraph";
+import Paragraph  from "../components/atoms/Paragraph";
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 export default {

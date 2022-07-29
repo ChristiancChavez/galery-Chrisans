@@ -1,5 +1,5 @@
 import React from "react";
-import Table  from "src/components/atoms/Table";
+import Table  from "../components/atoms/Table";
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 export default {
