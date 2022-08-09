@@ -16,7 +16,14 @@ const ButtonIcon = ({ label, children, testId }:IconTypes ) => {
       TransitionProps={{ timeout: 400 }}
       role="tooltip"
     >
-      <Button onClick={handleShowPage} variant="text" data-testid={testId}>
+      <Button 
+        onClick={handleShowPage} 
+        variant="outlined" 
+        data-testid={testId} 
+        color="inherit" 
+        size="large"
+        style={{padding: '30px'}}
+      >
         {children}
       </Button>
     </Tooltip>

@@ -6,6 +6,7 @@ type SubTitleTypes = {
 }
 const SubTitle = ({ text = '', testId }:SubTitleTypes ) => (
   <h3 
+    style={{marginTop:'10px'}}
     aria-label={text} 
     data-testid={testId}
   >
