@@ -12,7 +12,16 @@ const ActionsButton = ({ buttons }:ActionsButtonTypes ) => {
       divider={<Divider orientation="horizontal" flexItem />}
       spacing={2}
     >
-      {buttons.map(button => <ButtonIcon key={button.id} label={button.label} testId={button.testId}>{button.icon}</ButtonIcon> )}
+      {buttons.map(button => (
+        <ButtonIcon 
+          key={button.id} 
+          label={button.label} 
+          testId={button.testId}
+        >
+          {button.icon}
+        </ButtonIcon> 
+        ))
+      }
     </Stack>
   );
 };
