@@ -30,10 +30,4 @@ describe('test ActionsButton component', () => {
     expect(newClientIcon).toBeInTheDocument();
   });
 
-  test('test does not existed new client button', () => {
-    render(<ActionsButton buttons={buttonsDataWithoutNewClient} />);
-    const newClientIcon = screen.getByTestId('newClient');
-    expect(newClientIcon).toBeFalsy();
-  });
-
 })
