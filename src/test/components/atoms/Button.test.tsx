@@ -1,6 +1,6 @@
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
 import React from 'react';
-import ButtonIcon from 'src/components/atoms/IconButton';
+import Button from 'components/atoms/Button';
 import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 
 describe('test IconButton component', () => {
@@ -10,7 +10,7 @@ describe('test IconButton component', () => {
   })
 
   beforeEach(()=> {
-    render(<ButtonIcon label='addClients' testId="addClient"><PlaylistAddCheckIcon /></ButtonIcon>);
+    render(<Button label='addClients' testId="addClient"><PlaylistAddCheckIcon /></Button>);
   })
 
   test('button exist', () => {
