@@ -17,13 +17,6 @@ describe('test ActionsButton component', () => {
     { id: '5', label: "Malos Cliente", testId: 'badClient', icon: <PlaylistRemoveIcon /> },
   ];
 
-  const buttonsDataWithoutNewClient = [
-    { id: '2', label: "Buscar Cliente", testId: 'searchClient', icon: <PersonSearchIcon /> },
-    { id: '3', label: "Llamar Cliente", testId: 'callClient', icon: <PhoneInTalkIcon /> },
-    { id: '4', label: "Buenos Cliente", testId: 'goodClient', icon: <PlaylistAddCheckIcon /> },
-    { id: '5', label: "Malos Cliente", testId: 'badClient', icon: <PlaylistRemoveIcon /> },
-  ];
-
   test('test existed new client button', () => {
     render(<ActionsButton buttons={buttonsData} />);
     const newClientIcon = screen.getByTestId('newClient');
