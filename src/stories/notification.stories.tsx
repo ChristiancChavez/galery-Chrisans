@@ -1,7 +1,6 @@
 import React from "react";
-import Notification  from "src/components/atoms/Notification";
+import Notification  from "../components/atoms/Notification";
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-
 
 export default {
   title: 'Components/Notification/Notification',
