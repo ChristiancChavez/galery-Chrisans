@@ -17,11 +17,11 @@ export default {
 const Template: ComponentStory<typeof ActionsButton> = (args) => <ActionsButton {...args} />;
 
 const buttonsData = [
-  { id: '1', label: "Nuevo Cliente", testId: '1', icon: <PersonAddAltIcon /> },
-  { id: '2', label: "Buscar Cliente", testId: '2', icon: <PersonSearchIcon /> },
-  { id: '3', label: "Llamar Cliente", testId: '3', icon: <PhoneInTalkIcon /> },
-  { id: '4', label: "Buenos Cliente", testId: '4', icon: <PlaylistAddCheckIcon /> },
-  { id: '5', label: "Malos Cliente", testId: '5', icon: <PlaylistRemoveIcon /> },
+  { id: '1', label: "Nuevo Cliente", testId: 'newClient', icon: PersonAddAltIcon },
+  { id: '2', label: "Buscar Cliente", testId: 'searchClient', icon: PersonSearchIcon},
+  { id: '3', label: "Llamar Cliente", testId: 'callClient', icon: PhoneInTalkIcon},
+  { id: '4', label: "Buenos Cliente", testId: 'goodClient', icon: PlaylistAddCheckIcon},
+  { id: '5', label: "Malos Cliente", testId: 'badClient', icon: PlaylistRemoveIcon},
 ];
 
 export const actionsButtonClient = Template.bind({})

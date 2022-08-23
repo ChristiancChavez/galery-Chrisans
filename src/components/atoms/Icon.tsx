@@ -1,15 +1,9 @@
 import React from 'react';
-import IconButton from '@mui/material/IconButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 type IconTypes = {
-  IconName: React.FunctionComponent;
+  iconName: any;
 }
-const Icon = ({ IconName }:IconTypes ) => {
-  return (
-    <IconButton aria-label="delete">
-      <IconName />
-    </IconButton>
-  );
-};
+const Icon = ({ iconName }:IconTypes ) => <FontAwesomeIcon icon={iconName} fontSize="large" />
 
 export default Icon;

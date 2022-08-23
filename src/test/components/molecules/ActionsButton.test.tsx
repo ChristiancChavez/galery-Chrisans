@@ -10,11 +10,11 @@ import PlaylistRemoveIcon from '@mui/icons-material/PlaylistRemove';
 describe('test ActionsButton component', () => {
 
   const buttonsData = [
-    { id: '1', label: "Nuevo Cliente", testId: 'newClient', icon: <PersonAddAltIcon /> },
-    { id: '2', label: "Buscar Cliente", testId: 'searchClient', icon: <PersonSearchIcon /> },
-    { id: '3', label: "Llamar Cliente", testId: 'callClient', icon: <PhoneInTalkIcon /> },
-    { id: '4', label: "Buenos Cliente", testId: 'goodClient', icon: <PlaylistAddCheckIcon /> },
-    { id: '5', label: "Malos Cliente", testId: 'badClient', icon: <PlaylistRemoveIcon /> },
+    { id: '1', label: "Nuevo Cliente", testId: 'newClient', icon: PersonAddAltIcon },
+    { id: '2', label: "Buscar Cliente", testId: 'searchClient', icon: PersonSearchIcon},
+    { id: '3', label: "Llamar Cliente", testId: 'callClient', icon: PhoneInTalkIcon},
+    { id: '4', label: "Buenos Cliente", testId: 'goodClient', icon: PlaylistAddCheckIcon},
+    { id: '5', label: "Malos Cliente", testId: 'badClient', icon: PlaylistRemoveIcon},
   ];
 
   test('test existed new client button', () => {
