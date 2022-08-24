@@ -3,11 +3,11 @@ import React from 'react';
 type SubTitleTypes = {
   text: string,
   testId: string,
-  marginTop: string
+  style: string
 }
-const SubTitle = ({ text = '', testId, marginTop }:SubTitleTypes ) => (
+const SubTitle = ({ text = '', testId, style }:SubTitleTypes ) => (
   <h3 
-    style={{marginTop: `${marginTop}px`}}
+    className={style}
     aria-label={text} 
     data-testid={testId}
   >
