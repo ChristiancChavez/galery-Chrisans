@@ -22,7 +22,6 @@ const ButtonIcon = ({ label, children, testId }:IconTypes ) => {
         data-testid={testId} 
         color="inherit" 
         size="large"
-        style={{padding: '30px'}}
       >
         {children}
       </Button>
