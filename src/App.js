@@ -11,9 +11,9 @@ function App() {
       <h2>Christian</h2>
       <ButtonHome 
         label='Nuevo Cliente'
-        testIdButton={uuid()}
+        testIdButton='newClientButtonHome'
         text='Nuevo Cliente'
-        testIdSubtitle={uuid()}
+        testIdSubtitle='newClientSubtitleHome'
       >
         <PersonAddAltIcon color="action" fontSize="large" />
       </ButtonHome>
