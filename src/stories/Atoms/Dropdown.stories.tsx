@@ -1,7 +1,6 @@
 import React from "react";
-import Dropdown  from "src/components/atoms/Dropdown";
+import Dropdown  from "../components/atoms/Dropdown";
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-
 
 export default {
   title: 'Components/Dropdown/Dropdown',

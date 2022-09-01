@@ -8,6 +8,7 @@ type InputTypes = {
 
 const InputForm = ({ placeholder, type }:InputTypes ) => (
   <Input 
+    aria-label={`Este es un input para ${placeholder}`}
     placeholder={placeholder} 
     type={type} 
     required 
