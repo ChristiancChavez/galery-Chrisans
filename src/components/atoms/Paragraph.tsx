@@ -1,10 +1,7 @@
 import React from "react";
+import { BasicTypeText } from 'src/Types/types';
 
-type ParagraphTypes = {
-  text: string;
-  testId: string;
-};
-const Paragraph = ({ text, testId }:ParagraphTypes ) => (
+const Paragraph = ({ text='', testId }:BasicTypeText ) => (
     <p
       data-testid={testId}
       aria-label={`Se despliega el siguiente texto: ${text}`}

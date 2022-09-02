@@ -1,11 +1,11 @@
 import React from "react";
 import { Fade, Tooltip, Button } from "@mui/material";
+import {TestIdType} from '../../Types/types';
 
-type IconTypes = {
+interface IconTypes extends TestIdType {
   label: string;
   children?: React.ReactChild;
-  testId: string;
-};
+}
 
 const ButtonIcon = ({ label, children, testId }:IconTypes ) => {
   const handleShowPage = () => console.log(`${label} page`);
