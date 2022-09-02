@@ -3,8 +3,6 @@ import "./App.css";
 import ButtonHome from "./components/molecules/ButtonHome";
 import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
 
-import { v4 as uuid } from 'uuid';
-
 function App() {
   return (
     <div className="App">
