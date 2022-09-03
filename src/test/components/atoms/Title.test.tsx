@@ -8,11 +8,11 @@ describe('test title component', () => {
   }); 
 
   beforeAll(() => {
-    render(<Title testId='Clients' title='Clientes' />);
+    render(<Title testId='Clients' text='Clientes' />);
   }) 
 
   test('test existed Title', () => {
-    const heading = screen.getByText('Clientes');
+    const heading = screen.queryByText('Clientes');
     expect(heading).toBeInTheDocument();
   });
 
