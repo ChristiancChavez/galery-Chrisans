@@ -1,9 +1,9 @@
 import React from 'react';
 import Pagination from '@mui/material/Pagination';
+import { TestIdType } from '../../Types/types';
 
 
-type ClientsPaginationTypes = {
-  testId: string,
+interface ClientsPaginationTypes extends TestIdType {
   pages: number
 }
 
