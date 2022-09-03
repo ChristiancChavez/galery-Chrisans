@@ -1,16 +1,19 @@
 import React from 'react';
 import { Input } from '@mui/material';
+import { TestIdType } from '../../Types/types';
 
-type InputTypes = {
+interface InputTypes extends TestIdType {
   placeholder: string,
   type: string
 }
 
-const InputForm = ({ placeholder, type }:InputTypes ) => (
+const InputForm = ({ placeholder, type, testId }:InputTypes ) => (
   <Input 
+    aria-label={`Este es un input para ${placeholder}`}
     placeholder={placeholder} 
     type={type} 
-    required 
+    required
+    data-testid={testId}
   />
 );
 

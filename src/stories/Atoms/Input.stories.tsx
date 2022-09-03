@@ -1,7 +1,6 @@
 import React from "react";
-import InputForm  from "src/components/atoms/Input";
+import InputForm  from "../components/atoms/Input";
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-
 
 export default {
   title: 'Components/InputForm/InputForm',

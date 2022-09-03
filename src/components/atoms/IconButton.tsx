@@ -1,11 +1,11 @@
 import React from "react";
 import { Fade, Tooltip, Button } from "@mui/material";
+import {TestIdType} from '../../Types/types';
 
-type IconTypes = {
+interface IconTypes extends TestIdType {
   label: string;
   children?: React.ReactChild;
-  testId: string;
-};
+}
 
 const ButtonIcon = ({ label, children, testId }:IconTypes ) => {
   const handleShowPage = () => console.log(`${label} page`);
@@ -15,6 +15,7 @@ const ButtonIcon = ({ label, children, testId }:IconTypes ) => {
       TransitionComponent={Fade}
       TransitionProps={{ timeout: 400 }}
       role="tooltip"
+      aria-label={`Este es un label para ${label}`}
     >
       <Button onClick={handleShowPage} variant="text" data-testid={testId}>
         {children}

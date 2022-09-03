@@ -1,5 +1,5 @@
 import React from "react";
-import Title  from "src/components/atoms/Title";
+import Title  from "../components/atoms/Title";
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 

@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
-import ActionsButton from "src/components/molecules/ActionsButton";
-import { faUser, faMagnifyingGlass ,faPhone ,faThumbsUp ,faThumbsDown } from '@fortawesome/free-solid-svg-icons';
+import TableGalery from "./components/atoms/Table.tsx";
 
 function App() {
   // This data is only for testing purpose. It'll be deleted.
@@ -15,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <h2>Christian</h2>
-      <ActionsButton buttons={buttonsData} />
+      <TableGalery />
     </div>
   );
 }
