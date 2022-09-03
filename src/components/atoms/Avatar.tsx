@@ -1,9 +1,9 @@
 import React from 'react';
 import { Avatar } from '@mui/material';
 import { lime, orange, blue } from '@mui/material/colors';
+import { TestIdType } from '../../Types/types';
 
-type AvatarUserTypes = {
-  testId: string,
+interface AvatarUserTypes extends TestIdType {
   user: string
 }
 const AvatarUser = ({ user, testId }:AvatarUserTypes ) => { 

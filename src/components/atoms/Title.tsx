@@ -1,15 +1,13 @@
 import React from 'react';
+import {BasicTypeText} from 'src/Types/types';
 
-type TitleTypes = {
-  title: string,
-  testId: string
-}
-const Title = ({ title, testId }:TitleTypes ) => (
+
+const Title = ({ text, testId }:BasicTypeText ) => (
     <h1 
-      aria-label={`title ${title}`} 
+      aria-label={`title ${text}`} 
       data-testid={testId}
     >
-      {title}
+      {text}
     </h1>
   );
 
