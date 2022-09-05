@@ -3,9 +3,9 @@ import { TextField } from '@mui/material';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import {TestIdType} from '../../Types/types';
 
-type CalendarTypes = {
-  testId: string,
+interface CalendarTypes extends TestIdType {
   label: string
 }
 

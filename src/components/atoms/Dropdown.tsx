@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Select, MenuItem, InputLabel, SelectChangeEvent  } from '@mui/material';
+import {TestIdType} from '../../Types/types';
 
-type SelectTypes = {
+interface SelectTypes extends TestIdType {
   label: string,
   id: number,
   testId: string,

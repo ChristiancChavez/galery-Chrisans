@@ -3,11 +3,13 @@ import "./App.css";
 import TableGalery from "./components/atoms/Table.tsx";
 
 function App() {
-  const items = [
-    { value: "Sagrado corazón", itemId: 5, name: "Sagrado corazón" },
-    { value: "misericordioso", itemId: 3, name: "misericordioso" },
-    { value: "Sagrada familia", itemId: 4, name: "Sagrada familia" },
-    { value: "Guadalupe", itemId: 8, name: "Guadalupe" },
+  // This data is only for testing purpose. It'll be deleted.
+  const buttonsData = [
+    { id: '1', label: "Nuevo Cliente", testId: 'newClient', icon: faUser},
+    { id: '2', label: "Buscar Cliente", testId: 'searchClient', icon: faMagnifyingGlass},
+    { id: '3', label: "Llamar Cliente", testId: 'callClient', icon: faPhone},
+    { id: '4', label: "Buenos Cliente", testId: 'goodClient', icon: faThumbsUp},
+    { id: '5', label: "Malos Cliente", testId: 'badClient', icon: faThumbsDown},
   ];
   return (
     <div className="App">
