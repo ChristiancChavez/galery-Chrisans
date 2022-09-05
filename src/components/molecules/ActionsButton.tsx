@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonIcon from 'src/components/atoms/IconButton';
+import Button from 'src/components/atoms/Button';
 import Icon from 'src/components/atoms/Icon';
 import { Stack, Divider } from '@mui/material';
 
@@ -14,13 +14,13 @@ const ActionsButton = ({ buttons }:ActionsButtonTypes ) => {
       spacing={2}
     >
       {buttons.map(button => (
-        <ButtonIcon 
+        <Button
           key={button.id} 
           label={button.label} 
           testId={button.testId}
         >
           <Icon iconName={button.icon} />
-        </ButtonIcon> 
+        </Button> 
         ))
       }
     </Stack>
