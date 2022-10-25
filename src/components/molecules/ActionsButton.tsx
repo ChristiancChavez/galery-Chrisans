@@ -4,7 +4,7 @@ import Icon from 'src/components/atoms/Icon';
 import { Stack, Divider } from '@mui/material';
 
 type ActionsButtonTypes = {
-  buttons: { id: string, label: string, testId: string, icon: any }[]
+  buttons: { id: string, label: string, testId: string, icon: unknown }[]
 }
 const ActionsButton = ({ buttons }:ActionsButtonTypes ) => {
   return (
