@@ -1,5 +1,5 @@
 import React from 'react';
-import IconButton from 'src/components/atoms/IconButton';
+import Button from 'src/components/atoms/Button';
 import Subtitle from 'src/components/atoms/SubTitle';
 import Stack from '@mui/material/Stack';
 
@@ -18,9 +18,9 @@ const ButtonHome = ({ label, testIdButton, text, testIdSubtitle, children }:Butt
       alignItems="center"
       spacing={0}
     >
-      <IconButton label={label} testId={testIdButton}>
+      <Button label={label} testId={testIdButton}>
         {children}
-      </IconButton>
+      </Button>
       <Subtitle text={text} testId={testIdSubtitle} />
     </Stack>
   );
