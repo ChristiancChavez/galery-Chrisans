@@ -3,7 +3,7 @@ import ButtonHome from "src/components/molecules/ButtonHome";
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
 import PersonSearchIcon from '@mui/icons-material/PersonSearch';
-import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
+import PhoneForwardedIcon from '@mui/icons-material/PhoneForwarded';
 import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 import PlaylistRemoveIcon from '@mui/icons-material/PlaylistRemove';
 
@@ -29,7 +29,7 @@ buttonHomeCallClients.args = {
   testIdButton:'searchClientBtn', 
   text:'Llamar Clientes', 
   testIdSubtitle:'searchClientSubt', 
-  children: <PhoneInTalkIcon color="action" fontSize="large" />
+  children: <PhoneForwardedIcon color="action" fontSize="large" />
 };
 
 export const buttonHomeSearchClients = Template.bind({})

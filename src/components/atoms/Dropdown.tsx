@@ -4,10 +4,10 @@ import {TestIdType} from '../../Types/types';
 
 interface SelectTypes extends TestIdType {
   label: string,
-  id: number,
+  id: string,
   testId: string,
   //onChange: (() => void),
-  items: {value: string, itemId: number, name: string}[]
+  items: {value: string, itemId: string, name: string}[]
 }
 
 const Dropdown = ({ label, id, testId, items }:SelectTypes ) => {

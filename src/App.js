@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import TableGalery from "./components/atoms/Table.tsx";
+import AddClientForm from "./components/atoms/Dropdown";
 
 function App() {
   // This data is only for testing purpose. It'll be deleted.
@@ -15,6 +16,7 @@ function App() {
     <div className="App">
       <h2>Christian</h2>
       <TableGalery />
+      <AddClientForm />
     </div>
   );
 }

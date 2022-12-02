@@ -2,7 +2,7 @@ import React from "react";
 import ButtonIcon from "src/components/atoms/IconButton";
 import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
 import PersonSearchIcon from '@mui/icons-material/PersonSearch';
-import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
+import PhoneForwardedIcon from '@mui/icons-material/PhoneForwarded';
 import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 import PlaylistRemoveIcon from '@mui/icons-material/PlaylistRemove';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
@@ -31,7 +31,7 @@ labelSearchClient.args = {
 
 export const labelCallClient = Template.bind({})
 labelCallClient.args = {
-  children: <PhoneInTalkIcon />,
+  children: <PhoneForwardedIcon />,
   testId: 'ClientToCall',
   label:'Llamar clientes'
 };
