@@ -1,6 +1,6 @@
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
 import React from 'react';
-import ButtonIcon from 'src/components/atoms/IconButton';
+import ButtonIcon from 'src/components/atoms/Button';
 import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 
 describe('test IconButton component', () => {

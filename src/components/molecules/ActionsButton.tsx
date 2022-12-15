@@ -1,10 +1,11 @@
 import React from 'react';
-import ButtonIcon from 'src/components/atoms/IconButton';
+import Button from 'src/components/atoms/Button';
 import Icon from 'src/components/atoms/Icon';
 import { Stack, Divider } from '@mui/material';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 type ActionsButtonTypes = {
-  buttons: { id: string, label: string, testId: string, icon: any }[]
+  buttons: { id: string, label: string, testId: string, icon: IconProp }[]
 }
 const ActionsButton = ({ buttons }:ActionsButtonTypes ) => {
   return (
@@ -14,13 +15,13 @@ const ActionsButton = ({ buttons }:ActionsButtonTypes ) => {
       spacing={2}
     >
       {buttons.map(button => (
-        <ButtonIcon 
+        <Button
           key={button.id} 
           label={button.label} 
           testId={button.testId}
         >
           <Icon iconName={button.icon} />
-        </ButtonIcon> 
+        </Button> 
         ))
       }
     </Stack>
