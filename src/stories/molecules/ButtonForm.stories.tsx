@@ -1,18 +1,18 @@
 import React from "react";
-import ButtonForm from "components/molecules/ButtonForm";
-import {ComponentMeta, ComponentStory} from '@storybook/react';
+import ButtonHome from "components/molecules/ButtonHome";
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 export default {
   title: 'Components/ButtonIcon/Button',
-  component: ButtonForm,
+  component: ButtonHome,
   argTypes: { onClick: { action: 'clicked' } },
-} as ComponentMeta<typeof ButtonForm>;
+} as ComponentMeta<typeof ButtonHome>;
 
-const Template: ComponentStory<typeof ButtonForm> = (args) => <ButtonForm {...args} />;
+const Template: ComponentStory<typeof ButtonHome> = (args) => <ButtonHome {...args} />;
 
 export const buttonFormAddClient = Template.bind({})
 buttonFormAddClient.args = {
-  testId: 'addClientForm',
+  testIdButton: 'addClientForm',
   text: 'Crear Cliente',
   label: 'Crear Cliente'
 };

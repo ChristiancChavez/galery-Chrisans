@@ -3,7 +3,7 @@ import Pagination from '@mui/material/Pagination';
 import { TestIdType } from '../../Types/types';
 
 
-interface ClientsPaginationTypes extends TestIdType {
+export interface ClientsPaginationTypes extends TestIdType {
   pages: number
 }
 

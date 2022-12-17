@@ -3,7 +3,7 @@ import Button from 'src/components/atoms/Button';
 import Subtitle from 'src/components/atoms/SubTitle';
 import Stack from '@mui/material/Stack';
 
-type ButtonHomeTypes= {
+export interface ButtonHomeTypes  {
   label: string,
   testIdButton: string,
   text: string,

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Select, MenuItem, InputLabel, SelectChangeEvent  } from '@mui/material';
-import {TestIdType} from '../../Types/types';
+import { TestIdType } from '../../Types/types';
 
 interface SelectTypes extends TestIdType {
   label: string,

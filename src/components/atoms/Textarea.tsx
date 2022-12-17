@@ -2,7 +2,7 @@ import React from 'react';
 import { TextareaAutosize } from '@mui/base';
 import { TestIdType } from '../../Types/types';
 
-interface TextareaTypes extends TestIdType {
+export interface TextareaTypes extends TestIdType {
   placeholder: string,
 }
 
