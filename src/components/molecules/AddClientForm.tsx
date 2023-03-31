@@ -1,11 +1,11 @@
 import React from 'react';
 import Input from '../atoms/Input';
-import Dropdown from 'components/atoms/Dropdown';
+import Dropdown from '../atoms/Dropdown';
 import { inputsFormAddClient, categoriesFormAddClient, itemsFormAddClient } from  '../../helpers/Data';
 
 const AddClientForm = () => {
   return (
-    <div>
+    <>
       {
         inputsFormAddClient.map(item => (
           <Input
@@ -38,7 +38,7 @@ const AddClientForm = () => {
           />
         ))
       }
-    </div>
+    </>
   );
 };
 

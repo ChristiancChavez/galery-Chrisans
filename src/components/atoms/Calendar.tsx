@@ -8,7 +8,7 @@ export interface CalendarTypes {
 }
 
 const Calendar = ({ testId }:CalendarTypes ) => {
-  const [value, setValue] = React.useState<unknown>(null);
+  const [value, setValue] = useState<unknown>(null);
 
   return (
     <LocalizationProvider dateAdapter={AdapterMoment}>
