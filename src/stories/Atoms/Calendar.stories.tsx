@@ -11,7 +11,8 @@ const Template: ComponentStory<typeof Calendar> = (args) => <Calendar {...args} 
 
 export const calendar = Template.bind({})
 calendar.args = {
-  testId: 'Cuadros'
+  testId: 'Cuadros',
+  label: 'cuadros'
 };
 
 
