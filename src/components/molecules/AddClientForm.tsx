@@ -1,21 +1,24 @@
 import React from 'react';
 import Input from '../atoms/Input';
 import Dropdown from '../atoms/Dropdown';
+import { Stack, Container } from '@mui/material';
 import { inputsFormAddClient, categoriesFormAddClient, itemsFormAddClient } from  '../../helpers/Data';
 
 const AddClientForm = () => {
   return (
-    <>
-      {
-        inputsFormAddClient.map(item => (
-          <Input
-            key={item.id}
-            placeholder={item.placeholder}
-            type={item.type}
-            testId={item.testId}
-          />
-        ))
-      }
+    <Container fixed>
+        {
+          inputsFormAddClient.map(item => (
+            <Stack flexWrap="wrap" spacing={2} key={item.id}>
+            <Input
+              placeholder={item.placeholder}
+              type={item.type}
+              testId={item.testId}
+            />
+            </Stack>
+          ))
+        }
+      
       {
         categoriesFormAddClient.map(item => (
           <Dropdown
@@ -38,7 +41,7 @@ const AddClientForm = () => {
           />
         ))
       }
-    </>
+      </Container>
   );
 };
 
