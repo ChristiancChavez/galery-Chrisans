@@ -4,9 +4,10 @@ import { render, screen, cleanup } from '@testing-library/react';
 
 
 const items = [
-  {value: 'Sagrado corazón', itemId: '5', name: 'Sagrado corazón'},
-  {value: 'misericordioso', itemId: '3', name: 'misericordioso'},
-  {value: 'Sagrada familia', itemId: '4', name: 'Sagrada familia'},{value: 'Guadalupe', itemId: '8', name: 'Guadalupe'}
+  {value: 'Sagrado corazón', id: '5', name: 'Sagrado corazón'},
+  {value: 'misericordioso', id: '3', name: 'misericordioso'},
+  {value: 'Sagrada familia', id: '4', name: 'Sagrada familia'},
+  {value: 'Guadalupe', id: '8', name: 'Guadalupe'}
 ];
 describe('test Dropdown', () => {
   afterEach(()=> {
@@ -26,4 +27,3 @@ describe('test Dropdown', () => {
       expect(select).toBeInTheDocument();
     });
 })
-
