@@ -14,8 +14,8 @@ picturesDropdown.args = {
   label: 'Cuadros',
   id: '1',
   testId: 'select_pictures',
-  items: [{value: 'Sagrado corazón', id: '5', name: 'Sagrado corazón'},{value: 'misericordioso', id: '3', name: 'misericordioso'},
-  {value: 'Sagrada familia', id: '4', name: 'Sagrada familia'},{value: 'Guadalupe', id: '8', name: 'Guadalupe'}]
+  items: [{value: 'Sagrado corazón', id: '5', name: 'Sagrado corazón', testId:'sagradoCorazón'},{value: 'misericordioso', id: '3', name: 'misericordioso', testId:'misericordioso'},
+  {value: 'Sagrada familia', id: '4', name: 'Sagrada familia', testId:'sagradaFamilia'},{value: 'Guadalupe', id: '8', name: 'Guadalupe', testId:'guadalupe'}]
 };
 
 
