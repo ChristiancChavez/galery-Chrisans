@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import { Select, MenuItem, InputLabel, SelectChangeEvent  } from '@mui/material';
-import {TestIdType} from '../../Types/types';
-
-interface SelectTypes extends TestIdType {
+import { Select, MenuItem, SelectChangeEvent, InputLabel } from '@mui/material';
+export interface SelectTypes {
   label: string,
-  id: number,
+  id: string,
   testId: string,
   //onChange: (() => void),
-  items: {value: string, itemId: number, name: string}[]
+  items: {value: string, id: string, name: string, testId: string}[]
 }
 
 const Dropdown = ({ label, id, testId, items }:SelectTypes ) => {
@@ -30,7 +28,16 @@ const Dropdown = ({ label, id, testId, items }:SelectTypes ) => {
         aria-label={`Selecciona ${label}`}
       >
         {
-          items.map(item => <MenuItem  className='menuItem' value={item.value} data-testId={'menuItem'} key={item.itemId} aria-label={item.name}>{item.name}</MenuItem>)
+          items.map(item => 
+            <MenuItem  
+              className='menuItem' 
+              value={item.value} 
+              data-testid={item.testId} 
+              key={item.id} 
+              aria-label={item.name}
+              >
+                {item.name}
+            </MenuItem>)
         }
       </Select>
     </>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Input } from '@mui/material';
 import { TestIdType } from '../../Types/types';
 
-interface InputTypes extends TestIdType {
+export interface InputTypes extends TestIdType {
   placeholder: string,
   type: string
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import { Fade, Tooltip, Button } from "@mui/material";
-import {TestIdType} from '../../Types/types';
+import { TestIdType } from '../../Types/types';
 
-interface IconTypes extends TestIdType {
+export interface IconTypes extends TestIdType {
   label: string;
   children?: React.ReactChild;
 }

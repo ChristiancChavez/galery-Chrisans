@@ -1,5 +1,5 @@
 import React from "react";
-import Notification  from "../components/atoms/Notification";
+import Notification  from "../../components/atoms/Notification";
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 export default {

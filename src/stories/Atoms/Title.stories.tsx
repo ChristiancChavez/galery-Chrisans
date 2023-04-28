@@ -1,5 +1,5 @@
 import React from "react";
-import Title  from "../components/atoms/Title";
+import Title from "../../components/atoms/Title";
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 
@@ -12,7 +12,7 @@ const Template: ComponentStory<typeof Title> = (args) => <Title {...args} />;
 
 export const titleAddTitle = Template.bind({})
 titleAddTitle.args = {
-  title: ' Agregar Cliente',
+  text: ' Agregar Cliente',
   testId: 'title'
 };
  

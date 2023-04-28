@@ -4,8 +4,8 @@ import Icon from 'src/components/atoms/Icon';
 import { Stack, Divider } from '@mui/material';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
-type ActionsButtonTypes = {
-  buttons: { id: string, label: string, testId: string, icon: IconProp }[]
+export interface ActionsButtonTypes {
+  buttons: { id: string, label: string, testId: string, icon: IconProp | string }[]
 }
 const ActionsButton = ({ buttons }:ActionsButtonTypes ) => {
   return (

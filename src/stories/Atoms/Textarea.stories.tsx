@@ -1,5 +1,5 @@
 import React from "react";
-import Textarea  from "../components/atoms/Textarea";
+import Textarea  from "../../components/atoms/Textarea";
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 export default {

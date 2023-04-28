@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import {Snackbar, Button} from '@mui/material';
+import { Snackbar, Button } from '@mui/material';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
 
 
-type NotificationTypes = {
+export interface NotificationTypes {
   status: "error" | "warning" | "info" | "success",
   buttonClose: false | true
 }

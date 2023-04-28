@@ -1,5 +1,5 @@
 import React from "react";
-import Calendar  from "../components/atoms/Calendar";
+import Calendar  from "../../components/atoms/Calendar";
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 export default {
@@ -11,8 +11,8 @@ const Template: ComponentStory<typeof Calendar> = (args) => <Calendar {...args} 
 
 export const calendar = Template.bind({})
 calendar.args = {
-  label: 'Asignar cuotas',
-  testId: 'Cuadros'
+  testId: 'Cuadros',
+  label: 'cuadros'
 };
 
 

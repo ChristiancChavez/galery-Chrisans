@@ -1,5 +1,5 @@
 import React from 'react';
-import {BasicTypeText} from 'src/Types/types';
+import { BasicTypeText } from 'src/Types/types';
 
 
 const Title = ({ text, testId }:BasicTypeText ) => (
