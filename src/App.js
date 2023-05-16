@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Calendar from "./components/atoms/Calendar";
-import AddClientForm from "./components/molecules/AddClientForm";
+import Button from "./components/atoms/Button";
 
 function App() {
   // This data is only for testing purpose. It'll be deleted.
@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <h2>Christian</h2>
       <Calendar testId="calendar" label='escoge tu fecha' />
-      <AddClientForm />
+      <Button label="Crea un nuevo cliente " testId="newUser">Crear cliente</Button>
     </div>
   );
 }
