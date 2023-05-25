@@ -41,7 +41,7 @@ const AddClientForm = () => {
           />
         ))
       }
-      <Button label="Crea un nuevo cliente " testId="newUser">Crear cliente</Button>
+      <Button label="Crea un nuevo cliente" testId="newUser">Crear cliente</Button>
       </Container>
   );
 };

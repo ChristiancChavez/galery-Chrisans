@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useContext, useMemo } from 'react';
 
 interface ClientListContextType {
   userProfileState: {
@@ -42,11 +42,25 @@ const ClientListProvider: FC<React.ReactNode> = ({ children }) => {
     }
   ]);
 
+  const memoizedClientListContext = useMemo(
+    () => ({
+      userProfileState: userProfile, 
+      setClientListState: setUserProfile
+    }),[userProfile, setUserProfile]
+  )
+
   return (
-    <ClientListContext.Provider value={{ userProfileState: userProfile, setClientListState: setUserProfile }}>
+    <ClientListContext.Provider value={memoizedClientListContext}>
       {children}
     </ClientListContext.Provider>
   );
 }
 
+export const useClientInfoContext = () => {
+  const clientInfoContext = useContext(ClientListContext);
+
+  if(!useClientInfoContext) throw new Error('You need to use this context inside');
+
+  return clientInfoContext;
+}
 export default ClientListProvider;
