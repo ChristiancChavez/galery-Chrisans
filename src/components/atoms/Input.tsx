@@ -7,14 +7,17 @@ export interface InputTypes extends TestIdType {
   type: string
 }
 
-const InputForm = ({ placeholder, type, testId }:InputTypes ) => (
-  <Input 
-    aria-label={`Este es un input para ${placeholder}`}
-    placeholder={placeholder} 
-    type={type} 
-    required
-    data-testid={testId}
-  />
-);
+const InputForm = ({ placeholder, type, testId }:InputTypes ) => {
+
+  return (
+    <Input 
+      aria-label={`Este es un input para ${placeholder}`}
+      placeholder={placeholder} 
+      type={type} 
+      required
+      data-testid={testId}
+    />
+  )
+};
 
 export default InputForm;
