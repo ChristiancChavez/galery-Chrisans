@@ -1,16 +1,16 @@
 import { v4 as uuid } from "uuid";
 
 export const inputsFormAddClient = [
-  { placeholder: 'Nombre-Apellido', type: 'text', id: uuid(), testId:'nameOfClientForm' },
-  { placeholder: '# Pedido', type: 'text', id: uuid(), testId:'accountClientForm' }, 
-  { placeholder: 'Dirección', type: 'text', id: uuid(), testId:'addressOfClientForm' },
-  { placeholder: 'Barrio', type: 'text', id: uuid(), testId:'neighborhoodOfClientForm' },
-  { placeholder: 'Celular', type: 'number', id: uuid(), testId:'phoneOfClientForm' },
-  { placeholder: 'Referencia', type: 'text', id: uuid(), testId:'nameOfReferenceForm' },
-  { placeholder: 'Contacto', type: 'text', id: uuid(), testId:'contactOfReferenceForm' },
-  { placeholder: 'Fecha Cuota', type: 'text', id: uuid(), testId:'dateOfPaymentForm' },
-  { placeholder: '# Cuotas', type: 'number', id: uuid(), testId:'numberOfPaymentForm' },
-  { placeholder: 'Valor', type: 'number', id: uuid(), testId:'valeuOfProductForm' },
+  { placeholder: 'Nombre-Apellido', type: 'text', id: uuid(), testId:'nameOfClientForm',valueInput:'nameOfClientForm' },
+  { placeholder: '# Pedido', type: 'text', id: uuid(), testId:'accountClientForm',valueInput:'accountClientForm' }, 
+  { placeholder: 'Dirección', type: 'text', id: uuid(), testId:'addressOfClientForm',valueInput:'addressOfClientForm' },
+  { placeholder: 'Barrio', type: 'text', id: uuid(), testId:'neighborhoodOfClientForm',valueInput:'neighborhoodOfClientForm' },
+  { placeholder: 'Celular', type: 'number', id: uuid(), testId:'phoneOfClientForm',valueInput:'phoneOfClientForm' },
+  { placeholder: 'Referencia', type: 'text', id: uuid(), testId:'nameOfReferenceForm',valueInput:'nameOfReferenceForm' },
+  { placeholder: 'Contacto', type: 'text', id: uuid(), testId:'contactOfReferenceForm',valueInput:'contactOfReferenceForm' },
+  { placeholder: 'Fecha Cuota', type: 'text', id: uuid(), testId:'dateOfPaymentForm',valueInput:'dateOfPaymentForm' },
+  { placeholder: '# Cuotas', type: 'number', id: uuid(), testId:'numberOfPaymentForm',valueInput:'numberOfPaymentForm' },
+  { placeholder: 'Valor', type: 'number', id: uuid(), testId:'valeuOfProductForm',valueInput:'valeuOfProductForm' },
 ];
 
 export const categoriesFormAddClient = [
