@@ -4,10 +4,11 @@ import { TestIdType } from '../../Types/types';
 
 export interface InputTypes extends TestIdType {
   placeholder: string,
-  type: string
+  type: string,
+  value: string
 }
 
-const InputForm = ({ placeholder, type, testId }:InputTypes ) => {
+const InputForm = ({ placeholder, type, testId, value }:InputTypes ) => {
 
   return (
     <Input 
@@ -16,6 +17,7 @@ const InputForm = ({ placeholder, type, testId }:InputTypes ) => {
       type={type} 
       required
       data-testid={testId}
+      value={value}
     />
   )
 };
