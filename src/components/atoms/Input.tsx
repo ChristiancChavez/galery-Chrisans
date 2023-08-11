@@ -5,10 +5,10 @@ import { TestIdType } from '../../Types/types';
 export interface InputTypes extends TestIdType {
   placeholder: string,
   type: string,
-  value: string
+  name: string
 }
 
-const InputForm = ({ placeholder, type, testId, value }:InputTypes ) => {
+const InputForm = ({ placeholder, type, testId, name }:InputTypes ) => {
 
   return (
     <Input 
@@ -17,7 +17,7 @@ const InputForm = ({ placeholder, type, testId, value }:InputTypes ) => {
       type={type} 
       required
       data-testid={testId}
-      value={value}
+      name={name}
     />
   )
 };

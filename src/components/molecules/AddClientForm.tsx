@@ -68,7 +68,7 @@ const AddClientForm: React.FC = () => {
                   placeholder={item.placeholder}
                   type={item.type}
                   testId={item.testId}
-                  value={Formik.initialValues[item.value]}
+                  name={item.value}
                 />
               </Stack>
             ))}
