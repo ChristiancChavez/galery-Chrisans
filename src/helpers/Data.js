@@ -19,10 +19,10 @@ export const categoriesFormAddClient = [
     id: uuid(), 
     testId:'categoriesGalery',
     items: [
-      { value:'Cuadro pequeño', id:uuid(), name:'Cuadro pequeño', testId:'small-picture' },
-      { value:'Cuadro grande', id:uuid(), name:'Cuadro grande', testId:'cuadroGrande' },
-      { value:'Marmolina', id:uuid(), name:'Marmolina', testId:'marmolina' },
-      { value:'Cena', id:uuid(), name:'Cena', testId:'cena' }
+      { placeholder:'Cuadro pequeño' ,value:'smallPicture', id:uuid(), name:'Cuadro pequeño', testId:'smallPicture' },
+      { placeholder:'Cuadro grande', value:'bigPicture', id:uuid(), name:'Cuadro grande', testId:'bigPicture' },
+      { placeholder:'Marmolina', value:'marble',id:uuid(), name:'Marmolina', testId:'marble' },
+      { placeholder:'Cena', value:'lastMeal',id:uuid(), name:'Cena', testId:'lastMeal' }
     ], 
     
   },

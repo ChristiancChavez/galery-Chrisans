@@ -48,26 +48,26 @@ const AddClientForm2 = () => {
               placeholder={item.placeholder}
               type={item.type}
               testId={item.testId}
-              name={item.testId} // Use the testId as the name attribute
-              value={formik.values[item.testId]}
+              name={item.value}
+              value={formik.values[item.value]}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              error={formik.touched[item.testId] && Boolean(formik.errors[item.testId])}
+              error={formik.touched[item.value] && Boolean(formik.errors[item.value])}
             />
           </Stack>
         ))}
         {categoriesFormAddClient.map((item) => (
           <Dropdown
             key={item.id}
-            label={item.label}
+            label={item.placeholder}
             id={item.id}
             testId={item.testId}
             items={item.items}
-            value={formik.values[item.testId]}
+            value={formik.values[item.value]}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            error={formik.touched[item.testId] && Boolean(formik.errors[item.testId])}
-            helperText={formik.touched[item.testId] && formik.errors[item.testId]}
+            error={formik.touched[item.value] && Boolean(formik.errors[item.value])}
+            helperText={formik.touched[item.value] && formik.errors[item.value]}
           />
         ))}
         {itemsFormAddClient.map((item) => (
@@ -77,11 +77,11 @@ const AddClientForm2 = () => {
             id={item.id}
             testId={item.testId}
             items={item.items}
-            value={formik.values[item.testId]}
+            value={formik.values[item.value]}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            error={formik.touched[item.testId] && Boolean(formik.errors[item.testId])}
-            helperText={formik.touched[item.testId] && formik.errors[item.testId]}
+            error={formik.touched[item.value] && Boolean(formik.errors[item.value])}
+            helperText={formik.touched[item.value] && formik.errors[item.value]}
           />
         ))}
         <Button type="submit" variant="contained" color="primary">
