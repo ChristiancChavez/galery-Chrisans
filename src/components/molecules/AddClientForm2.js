@@ -63,10 +63,10 @@ const AddClientForm2 = () => {
             id={item.id}
             testId={item.testId}
             items={item.items}
-            value={formik.values[item.value]}
+            value={formik.values[item.items.value]}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            error={formik.touched[item.value] && Boolean(formik.errors[item.value])}
+            error={formik.touched[item.value] && Boolean(formik.errors[item.items.value])}
             helperText={formik.touched[item.value] && formik.errors[item.value]}
           />
         ))}
@@ -77,10 +77,10 @@ const AddClientForm2 = () => {
             id={item.id}
             testId={item.testId}
             items={item.items}
-            value={formik.values[item.value]}
+            value={formik.values[item.items.value]}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            error={formik.touched[item.value] && Boolean(formik.errors[item.value])}
+            error={formik.touched[item.value] && Boolean(formik.errors[item.items.value])}
             helperText={formik.touched[item.value] && formik.errors[item.value]}
           />
         ))}

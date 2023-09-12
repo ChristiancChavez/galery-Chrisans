@@ -10,7 +10,7 @@ export const inputsFormAddClient = [
   { placeholder: 'Contacto', type: 'text', id: uuid(), testId:'contactOfReferenceForm', value:'contactOfReferenceForm' },
   { placeholder: 'Fecha Cuota', type: 'text', id: uuid(), testId:'dateOfPaymentForm', value:'dateOfPaymentForm' },
   { placeholder: '# Cuotas', type: 'number', id: uuid(), testId:'numberOfPaymentForm', value:'numberOfPaymentForm' },
-  { placeholder: 'Valor', type: 'number', id: uuid(), testId:'valeuOfProductForm', value:'valeuOfProductForm' },
+  { placeholder: 'Valor', type: 'number', id: uuid(), testId:'valueOfProductForm', value:'valueOfProductForm' },
 ];
 
 export const categoriesFormAddClient = [
