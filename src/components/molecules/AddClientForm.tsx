@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Dropdown from '../atoms/Dropdown';
 import Button from '../atoms/Button';
 import { Stack, Container,Input } from '@mui/material';
 import { inputsFormAddClient, categoriesFormAddClient, itemsFormAddClient } from  '../../helpers/Data';
 import { useForm } from 'react-hook-form';
 import { TestIdType } from '../../Types/types';
+import { useClientInfoContext } from '../../context/clientListContext'; // Import the hook
+
 export interface AddClientFormTypes extends TestIdType {
   placeholder: string;
   type: string;
@@ -31,8 +33,12 @@ const AddClientForm = () => {
 //     values:[{value:''}]
 //   }
 // })
-  const { handleSubmit, register, formState: { errors }} = useForm<AddClientFormTypes>()
-  const onSubmit = handleSubmit((data) => console.log('ESTA ES LA DATA', data));
+const clientInfoContext = useClientInfoContext();
+const { setClientListState } = clientInfoContext;
+const { handleSubmit, register, formState: { errors }} = useForm<AddClientFormTypes>()
+  const onSubmit = handleSubmit((data) => {
+    setClientListState()
+    console.log('ESTA ES LA DATA', data)});
 
   return (
     <Container fixed>
@@ -54,24 +60,31 @@ const AddClientForm = () => {
         }
         {
           categoriesFormAddClient.map(item => (
+            <Stack flexWrap="wrap" spacing={2} key={item.id}>
             <Dropdown
-              key={item.id}
               label={item.label}
               id={item.id}
               testId={item.testId}
               items={item.items}
+              {...register(item.items.values as any)}
             />
+            {errors?.valueInput && <p>{errors.valueInput.message}</p>}
+            </Stack>
           ))
         }
         {
           itemsFormAddClient.map(item => (
+            <Stack flexWrap="wrap" spacing={2} key={item.id}>
             <Dropdown
               key={item.id}
               label={item.label}
               id={item.id}
               testId={item.testId}
               items={item.items}
+              {...register(item.items.values as any)}
             />
+            {errors?.valueInput && <p>{errors.valueInput.message}</p>}
+            </Stack>
           ))
         }
         <input type="submit" />

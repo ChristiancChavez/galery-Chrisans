@@ -1,22 +1,22 @@
-import React, { FC, useState, useContext, useMemo } from 'react';
+import React, { FC, useState, useContext, useMemo, createContext, ReactNode, SetStateAction } from 'react';
 
 interface ClientListContextType {
   userProfileState: {
     NameLastName: string,
     account: number,
     address: string,
-    Neighborhood: string,
+    neighborhood: string,
     phone: number,
     personalContact: string,
     paymentDate: string,
     payments: number,
     totalValue: number
   }[];
-  setClientListState: React.Dispatch<React.SetStateAction<{
+  setClientListState: React.Dispatch<SetStateAction<{
     NameLastName: string,
     account: number,
     address: string,
-    Neighborhood: string,
+    neighborhood: string,
     phone: number,
     personalContact: string,
     paymentDate: string,
@@ -25,15 +25,15 @@ interface ClientListContextType {
   }[]>>;
 }
 
-export const ClientListContext = React.createContext<ClientListContextType | null>(null);
+export const ClientListContext = createContext<ClientListContextType | null>(null);
 
-const ClientListProvider: FC<React.ReactNode> = ({ children }) => {
+const ClientListProvider: FC<ReactNode> = ({ children }) => {
   const [userProfile, setUserProfile] = useState([
     {
       NameLastName: '',
       account: 0,
       address: '',
-      Neighborhood: '',
+      neighborhood: '',
       phone: 0,
       personalContact: '',
       paymentDate: '',
