@@ -12,9 +12,9 @@ export default {
   title: 'Components/molecules/ActionsButton',
   component: ActionsButton,
   argTypes: { onClick: { action: 'clicked' } },
-} as ComponentMeta<typeof ActionsButton>;
+};
 
-const Template: ComponentStory<typeof ActionsButton> = (args) => <ActionsButton {...args} />;
+const Template = (args) => <ActionsButton {...args} />;
 
 const buttonsData = [
   { id: '1', label: "Nuevo Cliente", testId: 'newClient', icon: 'PersonAddAltIcon' },

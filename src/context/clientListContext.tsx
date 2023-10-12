@@ -2,7 +2,7 @@ import React, { FC, useState, useContext, useMemo, createContext, ReactNode, Set
 
 interface ClientListContextType {
   userProfileState: {
-    NameLastName: string,
+    nameLastName: string,
     account: number,
     address: string,
     neighborhood: string,
@@ -13,7 +13,7 @@ interface ClientListContextType {
     totalValue: number
   }[];
   setClientListState: React.Dispatch<SetStateAction<{
-    NameLastName: string,
+    nameLastName: string,
     account: number,
     address: string,
     neighborhood: string,
@@ -30,7 +30,7 @@ export const ClientListContext = createContext<ClientListContextType | null>(nul
 const ClientListProvider: FC<ReactNode> = ({ children }) => {
   const [userProfile, setUserProfile] = useState([
     {
-      NameLastName: '',
+      nameLastName: '',
       account: 0,
       address: '',
       neighborhood: '',
@@ -59,8 +59,9 @@ const ClientListProvider: FC<ReactNode> = ({ children }) => {
 export const useClientInfoContext = () => {
   const clientInfoContext = useContext(ClientListContext);
 
-  if(!useClientInfoContext) throw new Error('You need to use this context inside');
-
+  if (clientInfoContext === null) {
+    throw new Error('You need to use this context inside a ClientListProvider');
+  }
   return clientInfoContext;
 }
 export default ClientListProvider;

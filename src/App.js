@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Calendar from "./components/atoms/Calendar";
 import AddClientForm from "./components/molecules/AddClientForm";
-// import { ClientListContext } from "./context/clientListContext";
+import ClientListProvider  from "./context/clientListContext";
 
 function App() {
   // This data is only for testing purpose. It'll be deleted.
@@ -14,11 +14,13 @@ function App() {
   //   { id: '5', label: "Malos Cliente", testId: 'badClient', icon: faThumbsDown},
   // ];
   return (
-    <div className="App">
-      <h2>Christian</h2>
-      <Calendar testId="calendar" label='escoge tu fecha' />
-      <AddClientForm />
-    </div>
+    <ClientListProvider>
+      <div className="App">
+        <h2>Christian</h2>
+        <Calendar testId="calendar" label='escoge tu fecha' />
+        <AddClientForm />
+      </div>
+    </ClientListProvider>
   );
 }
 
