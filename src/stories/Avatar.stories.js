@@ -5,9 +5,9 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 export default {
   title: 'Components/Avatar/Avatar',
   component: Avatar,
-} as ComponentMeta<typeof Avatar>;
+};
 
-const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />;
+const Template = (args) => <Avatar {...args} />;
 
 export const avatarRogelio = Template.bind({})
 avatarRogelio.args = {

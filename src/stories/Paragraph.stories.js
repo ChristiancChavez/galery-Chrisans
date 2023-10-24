@@ -5,9 +5,9 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 export default {
   title: 'Components/Paragraph/Paragraph',
   component: Paragraph,
-} as ComponentMeta<typeof Paragraph>;
+};
 
-const Template: ComponentStory<typeof Paragraph> = (args) => <Paragraph {...args} />;
+const Template = (args) => <Paragraph {...args} />;
 
 export const paragraph = Template.bind({})
 paragraph.args = {

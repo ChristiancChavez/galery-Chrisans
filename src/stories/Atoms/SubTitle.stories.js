@@ -5,9 +5,9 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 export default {
   title: 'Components/SubTitle/SubTitle',
   component: SubTitle,
-} as ComponentMeta<typeof SubTitle>;
+};
 
-const Template: ComponentStory<typeof SubTitle> = (args) => <SubTitle {...args} />;
+const Template = (args) => <SubTitle {...args} />;
 
 export const subTitleClients = Template.bind({})
 subTitleClients.args = {

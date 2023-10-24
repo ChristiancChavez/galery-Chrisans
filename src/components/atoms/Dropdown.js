@@ -1,19 +1,12 @@
 import React, { useState } from 'react';
 import { Select, MenuItem, SelectChangeEvent, InputLabel } from '@mui/material';
-export interface SelectTypes {
-  label: string,
-  id: string,
-  testId: string,
-  //onChange: (() => void),
-  items: {value: string, id: string, name: string, testId: string}[]
-}
 
-const Dropdown = ({ label, id, testId, items }:SelectTypes ) => {
+const Dropdown = ({ label, id, testId, items }) => {
 
   const [valueSelect, setValueSelect] = useState('');
 
-  const handleChange = (event: SelectChangeEvent ) => {
-    setValueSelect(event.target.value as string);
+  const handleChange = (event) => {
+    setValueSelect(event.target.value);
   };
   return (
     <>

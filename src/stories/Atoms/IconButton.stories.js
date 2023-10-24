@@ -11,9 +11,9 @@ export default {
   title: 'Components/ButtonIcon/Button',
   component: Button,
   argTypes: { onClick: { action: 'clicked' } },
-} as ComponentMeta<typeof Button>;
+};
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template = (args) => <Button {...args} />;
 
 export const labelClients = Template.bind({})
 labelClients.args = {

@@ -3,13 +3,9 @@ import { TextField } from '@mui/material';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-export interface CalendarTypes {
-  testId: string,
-  label: string
-}
 
-const Calendar = ({ testId, label }:CalendarTypes ) => {
-  const [value, setValue] = useState<unknown>(null);
+const Calendar = ({ testId, label }) => {
+  const [value, setValue] = useState(null);
 
   return (
     <LocalizationProvider dateAdapter={AdapterMoment}>

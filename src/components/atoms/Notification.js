@@ -2,14 +2,9 @@ import React, { useState } from 'react';
 import { Snackbar, Button } from '@mui/material';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
 
-
-export interface NotificationTypes {
-  status: "error" | "warning" | "info" | "success",
-  buttonClose: false | true
-}
-const Notification = ({ status, buttonClose }:NotificationTypes ) => {
+const Notification = ({ status, buttonClose }) => {
   
-  const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
+  const Alert = React.forwardRef(function Alert(
     props,
     ref,
   ) {

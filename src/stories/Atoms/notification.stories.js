@@ -5,9 +5,9 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 export default {
   title: 'Components/Notification/Notification',
   component: Notification,
-} as ComponentMeta<typeof Notification>;
+};
 
-const Template: ComponentStory<typeof Notification> = (args) => <Notification {...args} />;
+const Template = (args) => <Notification {...args} />;
 
 export const errorNotification = Template.bind({})
 errorNotification.args = {

@@ -5,9 +5,9 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 export default {
   title: 'Components/Table/Table',
   component: Table,
-} as ComponentMeta<typeof Table>;
+};
 
-const Template: ComponentStory<typeof Table> = (args) => <Table {...args} />;
+const Template = (args) => <Table {...args} />;
 
 export const table = Template.bind({})
 table.args = {

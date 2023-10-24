@@ -10,9 +10,9 @@ import PlaylistRemoveIcon from '@mui/icons-material/PlaylistRemove';
 export default {
   title: 'Components/molecules/ButtonHome',
   component: ButtonHome,
-} as ComponentMeta<typeof ButtonHome>;
+};
 
-const Template: ComponentStory<typeof ButtonHome> = (args) => <ButtonHome {...args} />;
+const Template = (args) => <ButtonHome {...args} />;
 
 export const buttonHomeNewClients = Template.bind({})
 buttonHomeNewClients.args = {

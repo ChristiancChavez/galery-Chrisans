@@ -5,9 +5,9 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 export default {
   title: 'Components/Textarea/Textarea',
   component: Textarea,
-} as ComponentMeta<typeof Textarea>;
+};
 
-const Template: ComponentStory<typeof Textarea> = (args) => <Textarea {...args} />;
+const Template = (args) => <Textarea {...args} />;
 
 export const textareaShare = Template.bind({})
 textareaShare.args = {

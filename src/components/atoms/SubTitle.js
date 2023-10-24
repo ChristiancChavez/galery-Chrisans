@@ -1,7 +1,6 @@
 import React from 'react';
-import { BasicTypeText } from 'src/Types/types';
 
-const SubTitle = ({ text = '', testId }:BasicTypeText ) => (
+const SubTitle = ({ text = '', testId }) => (
   <h3 
     aria-label={text} 
     data-testid={testId}

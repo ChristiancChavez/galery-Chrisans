@@ -5,9 +5,9 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 export default {
   title: 'Components/InputForm/InputForm',
   component: InputForm,
-} as ComponentMeta<typeof InputForm>;
+};
 
-const Template: ComponentStory<typeof InputForm> = (args) => <InputForm {...args} />;
+const Template = (args) => <InputForm {...args} />;
 
 export const nameInput = Template.bind({})
 nameInput.args = {

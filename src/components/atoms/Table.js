@@ -19,18 +19,18 @@ import PlaylistRemoveIcon from '@mui/icons-material/PlaylistRemove';
 import PlaylistAddCheckIcon from '@mui/icons-material/PlaylistAddCheck';
 
 function createData(
-  receipt: string,
-  id: string,
-  names: string,
-  phone: number,
-  last_payment: string,
-  previous_payment: string,
-  payments: string,
-  historial_payments: string,
-  category: string,
-  image: string,
-  price: number,
-  complementary_messages: {id_message: string, autor: string, message: string, date_message: string}[],
+  receipt,
+  id,
+  names,
+  phone,
+  last_payment,
+  previous_payment,
+  payments,
+  historial_payments,
+  category,
+  image,
+  price,
+  complementary_messages,
 ) {
   return {
     receipt,
@@ -105,7 +105,7 @@ const Row = (
     price, 
     history_payments,
     complementary_messages
-  }: ReturnType<typeof createData>) => {
+  }) => {
 
   const [open, setOpen] = useState(false);
   
@@ -478,10 +478,7 @@ const dataRows = [
   ),
 ];
 
-type TableTypes = {
-  testId: string,
-}
-const TableGalery = ({ testId }:TableTypes ) => {
+const TableGalery = ({ testId }) => {
 
   const dataCells = [
     { title: "Pedido", id: uuid() },

@@ -1,33 +1,9 @@
 import React, { FC, useState, useContext, useMemo, createContext, ReactNode, SetStateAction } from 'react';
 
-interface ClientListContextType {
-  userProfileState: {
-    nameLastName: string,
-    account: number,
-    address: string,
-    neighborhood: string,
-    phone: number,
-    personalContact: string,
-    paymentDate: string,
-    payments: number,
-    totalValue: number
-  }[];
-  setClientListState: React.Dispatch<SetStateAction<{
-    nameLastName: string,
-    account: number,
-    address: string,
-    neighborhood: string,
-    phone: number,
-    personalContact: string,
-    paymentDate: string,
-    payments: number,
-    totalValue: number
-  }[]>>;
-}
 
-export const ClientListContext = createContext<ClientListContextType | null>(null);
+export const ClientListContext = createContext(null);
 
-const ClientListProvider: FC<ReactNode> = ({ children }) => {
+const ClientListProvider = ({ children }) => {
   const [userProfile, setUserProfile] = useState([
     {
       nameLastName: '',

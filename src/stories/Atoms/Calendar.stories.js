@@ -5,9 +5,9 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 export default {
   title: 'Components/Calendar/Calendar',
   component: Calendar,
-} as ComponentMeta<typeof Calendar>;
+};
 
-const Template: ComponentStory<typeof Calendar> = (args) => <Calendar {...args} />;
+const Template= (args) => <Calendar {...args} />;
 
 export const calendar = Template.bind({})
 calendar.args = {

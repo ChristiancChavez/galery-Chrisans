@@ -6,9 +6,9 @@ export default {
   title: 'Components/ButtonIcon/Button',
   component: ButtonHome,
   argTypes: { onClick: { action: 'clicked' } },
-} as ComponentMeta<typeof ButtonHome>;
+};
 
-const Template: ComponentStory<typeof ButtonHome> = (args) => <ButtonHome {...args} />;
+const Template = (args) => <ButtonHome {...args} />;
 
 export const buttonFormAddClient = Template.bind({})
 buttonFormAddClient.args = {

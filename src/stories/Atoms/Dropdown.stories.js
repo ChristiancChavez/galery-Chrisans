@@ -5,9 +5,9 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 export default {
   title: 'Components/Dropdown/Dropdown',
   component: Dropdown,
-} as ComponentMeta<typeof Dropdown>;
+};
 
-const Template: ComponentStory<typeof Dropdown> = (args) => <Dropdown {...args} />;
+const Template = (args) => <Dropdown {...args} />;
 
 export const picturesDropdown = Template.bind({})
 picturesDropdown.args = {
